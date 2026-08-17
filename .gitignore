@@ -1,0 +1,28 @@
+# --- credentials -----------------------------------------------------------
+# Belt and braces: the specific file, plus patterns, so a differently-named key
+# file can't be committed by accident later.
+elevenlabs_api_key.txt
+.env
+.env.*
+*.key
+*.pem
+*.ppk
+id_rsa*
+id_ed25519*
+*_api_key*
+*apikey*
+*secret*
+*credentials*
+authorized_keys
+
+# --- working notes, not for publication ------------------------------------
+PLAN.md
+
+# --- build artefacts -------------------------------------------------------
+.venv/
+build/
+__pycache__/
+*.pyc
+
+# Intermediate copy of the robot's audio; reference/robot/EN/ holds the files.
+reference/robot/audio-en.tar.gz
