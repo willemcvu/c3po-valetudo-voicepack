@@ -1,19 +1,30 @@
 #!/usr/bin/env bash
 # Encode TTS output to exactly what the Dreame firmware expects:
-# Ogg Vorbis, mono, 16 kHz — optionally through a "droid" processing chain.
+# Ogg Vorbis, mono, 16 kHz — optionally through a processing chain.
 #
-#   ./encode.sh <input-dir> <output-dir> [profile]
+#   ./encode.sh <pack>                       # pack mode: build/mp3 -> build/ogg, profile from pack.py
+#   ./encode.sh <input-dir> <output-dir> [p] # manual mode: explicit dirs + profile
 #
-# Profiles (droid character, increasing):
-#   p0  clean       loudness-normalised only, no colouring
-#   p1  light       presence lift + narrow band + short body reflection
-#   p2  medium      p1 + flanger shimmer (metallic)   <- default
+# Profiles (character colouring, increasing):
+#   p0  clean       loudness-normalised only, no colouring  (natural voices)
+#   p1  light       presence lift + narrow band + short reflection
+#   p2  medium      p1 + flanger shimmer (metallic)
 #   p3  heavy       p2 + chorus and gentle bit-crush (overtly synthetic)
 set -euo pipefail
 
-IN="${1:?usage: encode.sh <input-dir> <output-dir> [profile]}"
-OUT="${2:?usage: encode.sh <input-dir> <output-dir> [profile]}"
-PROFILE="${3:-p2}"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Pack mode when the single argument names a pack.
+if [ "$#" -eq 1 ] && [ -f "$ROOT/packs/$1/pack.py" ]; then
+  NAME="$1"
+  IN="$ROOT/packs/$NAME/build/mp3"
+  OUT="$ROOT/packs/$NAME/build/ogg"
+  PROFILE=$(python3 -c "import sys;sys.path.insert(0,'$ROOT/scripts');import packlib;print(packlib.load_pack('$NAME').META['profile'])")
+else
+  IN="${1:?usage: encode.sh <pack>  |  encode.sh <in-dir> <out-dir> [profile]}"
+  OUT="${2:?usage: encode.sh <pack>  |  encode.sh <in-dir> <out-dir> [profile]}"
+  PROFILE="${3:-p1}"
+fi
 
 # Applied last in every chain: consistent perceived loudness across prompts,
 # so an error message doesn't blast twice as loud as a status chirp.

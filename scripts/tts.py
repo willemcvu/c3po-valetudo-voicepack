@@ -21,13 +21,16 @@ def api_key():
     return (ROOT / "elevenlabs_api_key.txt").read_text().strip()
 
 
-def voices():
-    """Saved C-3PO candidate voices, tag -> ElevenLabs voice_id.
+def voices(pack_dir):
+    """Saved candidate voices for a pack, tag -> ElevenLabs voice_id.
 
-    C2 is the one the pack ships; B1 and C1 were the other two finalists, kept
-    so they can be swapped in without redoing the voice design.
+    Reads packs/<name>/voices.json. The tag the pack ships is META['voice_tag'];
+    the others are finalists kept so they can be swapped without redoing the
+    voice design.
     """
-    return json.loads((ROOT / "voices.json").read_text())
+    from pathlib import Path
+
+    return json.loads((Path(pack_dir) / "voices.json").read_text())
 
 
 def speak(text, voice_id, model=DEFAULT_MODEL, settings=None, key=None):

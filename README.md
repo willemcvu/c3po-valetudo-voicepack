@@ -1,25 +1,37 @@
-# C-3PO voice pack for Valetudo
+# Valetudo voice packs for Dreame
 
-A C-3PO voice pack for Dreame robot vacuums running [Valetudo](https://valetudo.cloud/).
-All 421 stock prompts are rewritten and re-voiced.
+Custom voice packs for Dreame robot vacuums running [Valetudo](https://valetudo.cloud/). Each
+pack rewrites and re-voices all 421 stock prompts in character.
 
 Built and tested on a Dreame L10S Pro Ultra Heat (`r2338`). Other Dreame models using the
 same sound IDs are likely compatible but untested.
 
-Sample: [`samples/demo.ogg`](samples/demo.ogg) (16 kHz mono, as played by the robot).
+Packs:
+
+- **C-3PO** (`packs/c3po/`) — fussy, anxious protocol droid. Language code `C3PO`.
+- **DJ Catnip** (`packs/djcatnip/`) — hip music-loving cat DJ, cloned voice. Language code `CATNIP`.
+
+## Browse and install
+
+A catalog site (GitHub Pages, generated into `docs/`) lets you sample each pack and copy its
+install fields: browse, play, then paste the URL / Language Code / Hash into Valetudo.
+Regenerate it with `scripts/build_site.py` after adding or rebuilding a pack.
 
 ## Install
 
-In Valetudo, open **Robot Settings > Misc Settings > Voice packs** and enter:
+In Valetudo, open **Robot Settings > Misc Settings > Voice packs** and enter the URL, Language
+Code and Hash for a pack. Get them from the catalog site (copy buttons), or read them from the
+pack: the URL follows
 
-| Field | Value |
-|---|---|
-| URL | `https://github.com/willemcvu/c3po-valetudo-voicepack/raw/main/dist/c3po.tar.gz` |
-| Language Code | `C3PO` |
-| Hash | `1b1cf266a263a2bdc34df61368a4d429` |
+```
+https://github.com/<owner>/<repo>/raw/main/packs/<pack>/dist/<pack>.tar.gz
+```
+
+the Language Code is `META["language_code"]` in `packs/<pack>/pack.py`, and the Hash is in
+`packs/<pack>/dist/HASH.txt`.
 
 Select **Set Voice Pack**. The robot downloads the archive, verifies the MD5, and extracts it
-to `/data/personalized_voice/C3PO/`.
+to `/data/personalized_voice/<language code>/`.
 
 ## Uninstall
 
@@ -28,23 +40,29 @@ the install.
 
 ## Build
 
+Each pack lives in `packs/<name>/`. A pack is one `pack.py` declaring `META` (name, language
+code, voice tag, encode profile), `SKIP`, and `REWRITES`, plus a `voices.json` of ElevenLabs
+voice IDs. The stock prompt inventory (`stock_lines.csv`) is shared across packs. Scripts take
+a pack name:
+
 ```bash
-python3 -m venv .venv && .venv/bin/pip install faster-whisper
+python3 -m venv .venv && .venv/bin/pip install faster-whisper numpy
 echo "sk-..." > elevenlabs_api_key.txt
 
-.venv/bin/python scripts/transcribe.py       # robot's stock oggs -> lines.csv
-.venv/bin/python scripts/merge_rewrites.py   # rewrites.py -> lines.csv
-.venv/bin/python scripts/generate.py         # lines.csv -> build/mp3/
-./scripts/encode.sh build/mp3 build/ogg p1   # -> ogg mono 16 kHz
-./scripts/package.sh                         # -> dist/c3po.tar.gz + hash
+.venv/bin/python scripts/transcribe.py            # robot's stock oggs -> stock_lines.csv (once)
+.venv/bin/python scripts/merge_rewrites.py <pack> # pack.py + stock -> packs/<pack>/lines.csv
+.venv/bin/python scripts/generate.py <pack>       # -> packs/<pack>/build/mp3/
+./scripts/encode.sh <pack>                        # -> packs/<pack>/build/ogg (profile from pack.py)
+./scripts/package.sh <pack>                        # -> packs/<pack>/dist/<pack>.tar.gz + hash
+.venv/bin/python scripts/build_site.py            # regenerate docs/ catalog
 ```
 
-Prompt text is defined in `scripts/rewrites.py`. `generate.py` skips lines that already have
-an mp3, so editing a subset only regenerates those. Delete the corresponding files in
-`build/mp3/` to force regeneration.
+`generate.py` skips lines that already have an mp3, so editing a subset only regenerates
+those — delete the corresponding files in `packs/<pack>/build/mp3/` to force it.
 
-`encode.sh` accepts a profile argument from `p0` (no processing) to `p3` (maximum). The
-published pack uses `p1`.
+`encode.sh` uses the profile in `pack.py` (`p0` clean … `p3` heavily processed); a droid uses
+`p1`, a natural voice `p0`. `scripts/make_beat.py` generates royalty-free beats (synthesised,
+no samples) for mixing under signature prompts.
 
 Requires ffmpeg and an ElevenLabs API key. The key is read from `ELEVENLABS_API_KEY` if set,
 otherwise from `elevenlabs_api_key.txt`.

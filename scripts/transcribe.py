@@ -17,7 +17,7 @@ from faster_whisper import WhisperModel
 ROOT = Path(__file__).resolve().parent.parent
 EN_DIR = ROOT / "reference" / "robot" / "EN"
 COMMUNITY_CSV = ROOT / "reference" / "community" / "robinfrcd_sound_list_l10s_ultra.csv"
-OUT_CSV = ROOT / "lines.csv"
+OUT_CSV = ROOT / "stock_lines.csv"  # shared, pack-independent inventory
 
 MODEL = os.environ.get("WHISPER_MODEL", "small.en")
 
@@ -92,8 +92,6 @@ def main():
                 "community_text": ref,
                 "stock_text": ref or text,
                 "source": "community" if ref else "whisper",
-                "c3po_text": "",
-                "status": "todo",
             }
         )
         if n % 25 == 0 or n == len(files):

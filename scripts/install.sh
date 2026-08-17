@@ -1,24 +1,28 @@
 #!/usr/bin/env bash
-# Serve the pack over HTTP and tell the robot to fetch it.
+# Serve a pack over HTTP and tell the robot to fetch it.
 #
-#   ./install.sh [tar.gz] [robot-ip]
+#   ./install.sh <pack> [robot-ip]
 #
-# The robot downloads the archive itself, verifies the MD5, and extracts to
+# Reads packs/<pack>/dist/<pack>.tar.gz and the language code from pack.py. The
+# robot downloads the archive itself, verifies the MD5, and extracts it to
 # /data/personalized_voice/<LANGUAGE_CODE>/. The HTTP server only needs to live
 # long enough for that one fetch.
 #
-# To revert: set the language back to "EN" in Valetudo (Robot Settings -> Misc),
-# or PUT {"action":"download", ...} with a stock pack. The factory prompts in
-# /audio/EN are never touched.
+# To revert: set the language back to "EN" in Valetudo (Robot Settings -> Misc).
+# The factory prompts in /audio/EN are never touched.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PACK="${1:-$ROOT/dist/c3po.tar.gz}"
+NAME="${1:?usage: install.sh <pack> [robot-ip]}"
 ROBOT="${2:-192.168.68.78}"
-LANG_CODE="${LANG_CODE:-C3PO}"
 PORT="${PORT:-8123}"
+PDIR="$ROOT/packs/$NAME"
+PACK="$PDIR/dist/$NAME.tar.gz"
 
-[ -f "$PACK" ] || { echo "no pack at $PACK — run package.sh first" >&2; exit 1; }
+[ -f "$PDIR/pack.py" ] || { echo "no pack '$NAME' at $PDIR" >&2; exit 1; }
+[ -f "$PACK" ] || { echo "no pack at $PACK — run package.sh $NAME first" >&2; exit 1; }
+
+LANG_CODE=$(python3 -c "import sys;sys.path.insert(0,'$ROOT/scripts');import packlib;print(packlib.load_pack('$NAME').META['language_code'])")
 
 # Pick the interface that actually routes to the robot, so we advertise a URL
 # the robot can reach rather than whichever address happens to be first.

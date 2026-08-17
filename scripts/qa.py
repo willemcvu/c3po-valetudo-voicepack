@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Sanity-check generated prompts before packaging.
+"""Sanity-check a pack's generated prompts before packaging.
+
+    scripts/qa.py <pack> [mp3|ogg]
 
 Flags the two failure modes that actually happen with TTS batches: a clip that
 came out far longer than the stock prompt it replaces (the robot talks over
@@ -11,11 +13,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-CSV = ROOT / "lines.csv"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import packlib  # noqa: E402
 
-# A rewrite is allowed to run longer than the stock line — Threepio is wordier by
-# design — but past this it stops being charming.
+# A rewrite is allowed to run longer than the stock line — these characters are
+# wordier by design — but past this it stops being charming.
 LONG_RATIO = 2.5
 LONG_ABS = 9.0
 SHORT_ABS = 0.6
@@ -34,9 +36,12 @@ def duration(path):
 
 
 def main():
-    audio_dir = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "build/mp3")
-    ext = "*.mp3" if "mp3" in audio_dir.name else "*.ogg"
-    rows = {r["id"]: r for r in csv.DictReader(CSV.open())}
+    name = packlib.arg_pack(sys.argv)
+    pdir = packlib.pack_dir(name)
+    which = sys.argv[2] if len(sys.argv) > 2 else "mp3"
+    audio_dir = pdir / "build" / which
+    ext = f"*.{which}"
+    rows = {r["id"]: r for r in csv.DictReader((pdir / "lines.csv").open())}
 
     present, long_, short, silent = [], [], [], []
     for f in sorted(audio_dir.glob(ext), key=lambda p: int(p.stem) if p.stem.isdigit() else 0):
@@ -47,14 +52,14 @@ def main():
         stock = float(row["duration"]) or 0.01
         present.append(f.stem)
         if d < SHORT_ABS:
-            (silent if d < 0.1 else short).append((f.stem, d, stock, row["c3po_text"]))
+            (silent if d < 0.1 else short).append((f.stem, d, stock, row["voice_text"]))
         elif d > LONG_ABS or d / stock > LONG_RATIO:
-            long_.append((f.stem, d, stock, row["c3po_text"]))
+            long_.append((f.stem, d, stock, row["voice_text"]))
 
-    expected = [r["id"] for r in rows.values() if r["status"] != "skip" and r["c3po_text"].strip()]
+    expected = [r["id"] for r in rows.values() if r["status"] != "skip" and r["voice_text"].strip()]
     missing = sorted(set(expected) - set(present), key=lambda x: int(x) if x.isdigit() else 0)
 
-    print(f"{len(present)} / {len(expected)} generated in {audio_dir}")
+    print(f"[{name}] {len(present)} / {len(expected)} generated in {audio_dir}")
     if missing:
         print(f"\nMISSING ({len(missing)}): {', '.join(missing[:40])}"
               + (" …" if len(missing) > 40 else ""))

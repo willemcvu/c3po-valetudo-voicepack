@@ -1,0 +1,422 @@
+id,duration,whisper_text,community_text,stock_text,source
+0,6.16,.,Startup sound,Startup sound,community
+1,3.59,Waiting for the network configuration.,Waiting for the network configuration.,Waiting for the network configuration.,community
+2,6.64,"Unable to connect to the Wi-Fi network, please check Wi-Fi password and try again later.",Unable to connect to the Wi-Fi network. Please check Wi-Fi password and try again later.,Unable to connect to the Wi-Fi network. Please check Wi-Fi password and try again later.,community
+3,5.78,"Unable to connect to the server, please check your local network and try again later.",Unable to connect to the server. Please check your local network and try again later.,Unable to connect to the server. Please check your local network and try again later.,community
+4,3.88,Robot has exited network configuration mode.,Robot has exited network configuration mode.,Robot has exited network configuration mode.,community
+5,2.72,Network connected successfully.,Network connected successfully.,Network connected successfully.,community
+6,4.04,Network connection failed. Please try again later.,Network connection failed. Please try again later.,Network connection failed. Please try again later.,community
+7,1.77,Start cleaning.,Start cleaning.,Start cleaning.,community
+8,2.35,Start spot cleaning.,Start spot cleaning.,Start spot cleaning.,community
+9,2.27,Start scheduled cleaning.,Start scheduled cleaning.,Start scheduled cleaning.,community
+10,2.23,Start resuming cleaning.,Start resuming cleaning.,Start resuming cleaning.,community
+11,1.61,Paused.,Paused.,Paused.,community
+12,2.76,Cleaning task completed.,Cleaning task completed!,Cleaning task completed!,community
+13,2.89,Returning to the dock to charge.,Returning to the dock to charge.,Returning to the dock to charge.,community
+14,6.60,"Low battery, returning to the dock to charge. Robot will resume working after charging.",Low battery. Returning to the dock to charge. Robot will resume working after charging.,Low battery. Returning to the dock to charge. Robot will resume working after charging.,community
+17,3.27,Please move the robot back to the base station.,Please move the robot back to the base station.,Please move the robot back to the base station.,community
+18,0.82,Charging.,Returned to the base station.,Returned to the base station.,community
+19,4.35,Please remove the robot from the base station before turning it off.,Please remove the robot from the base station before turning it off.,Please remove the robot from the base station before turning it off.,community
+20,1.98,Low battery.,Low battery.,Low battery.,community
+21,3.01,"Low battery, robot will turn off.",Low battery robot will turn off.,Low battery robot will turn off.,community
+25,4.41,"Low battery, unable to carry out the scheduled cleanup.",Low battery. Unable to carry out the scheduled clean-up.,Low battery. Unable to carry out the scheduled clean-up.,community
+26,2.66,Restoring to factory settings.,Restoring to factory settings.,Restoring to factory settings.,community
+27,6.44,"Updating, taking about five minutes. Do not turn off nor start a cleaning task.","Updating, taking about five minutes. Do not turn off nor start a cleaning task.","Updating, taking about five minutes. Do not turn off nor start a cleaning task.",community
+28,2.11,Updated successfully.,Updated successfully.,Updated successfully.,community
+29,3.24,Update failed. Please try again later.,Update failed. Please try again later.,Update failed. Please try again later.,community
+30,2.51,"Positioning, please wait.","Positioning, please wait.","Positioning, please wait.",community
+31,5.64,Positioning failed. Map is invalid. Robot will start a new cleanup.,Positioning failed. Map is invalid. Robot will start a new clean-up.,Positioning failed. Map is invalid. Robot will start a new clean-up.,community
+34,3.95,Dust bin not installed. Please install it.,Dustbin not installed. Please install it.,Dustbin not installed. Please install it.,community
+35,3.63,"Main brush error, please check and clean it.",Main brush error. Please check and clean it.,Main brush error. Please check and clean it.,community
+36,3.50,"Side brush error, please check and clean it.",Side brush error. Please check and clean it.,Side brush error. Please check and clean it.,community
+37,3.50,"Right wheel error, please check and clean it.",Right wheel error. Please check and clean it.,Right wheel error. Please check and clean it.,community
+38,3.66,"Left wheel error, please check and clean it.",Left wheel error. Please check and clean it.,Left wheel error. Please check and clean it.,community
+39,7.62,"Wheels are not in contact with the ground. Please wipe the cliff sensors, reposition the robot, and start it again.","Wheels are not in contact with the ground. Please wipe the cliff sensors, reposition the robot, and start it again.","Wheels are not in contact with the ground. Please wipe the cliff sensors, reposition the robot, and start it again.",community
+40,4.11,The robot is trapped. Please clear the obstacles around it.,The robot is trapped. Please clear the obstacles around it.,The robot is trapped. Please clear the obstacles around it.,community
+41,6.21,Wheels are not in contact with the ground. Please reposition the robot and start it again.,Wheels are not in contact with the ground. Please reposition the robot and start it again.,Wheels are not in contact with the ground. Please reposition the robot and start it again.,community
+42,2.60,Please check and clean filter.,Please check and clean filter.,Please check and clean filter.,community
+43,4.80,Bumper error. Please gently tap to see if it rebounds.,Bumper error. Please gently tap to see if it rebounds.,Bumper error. Please gently tap to see if it rebounds.,community
+44,5.08,"Error, please check the user manual or contact customer service.",Error. Please check the user manual or contact customer service.,Error. Please check the user manual or contact customer service.,community
+45,1.58,I am here.,I am here.,I am here.,community
+46,5.25,Robot and phone connected. Please return to app to wait for the result.,Robot and phone connected. Please return to app to wait for the result.,Robot and phone connected. Please return to app to wait for the result.,community
+47,1.89,Start charging.,Start charging.,Start charging.,community
+48,3.01,"Low battery, returning to the dock.",Low battery. Returning to the dock.,Low battery. Returning to the dock.,community
+50,3.84,Charging error. Please clean charging contacts.,Charging error. Please clean charging contacts.,Charging error. Please clean charging contacts.,community
+52,5.07,Robot tilted. Please put it on a level ground to restart.,Robot tilted. Please put it on a level ground to restart.,Robot tilted. Please put it on a level ground to restart.,community
+54,3.41,Positioning succeeded. Resuming cleaning.,Positioning succeeded. Resuming cleaning.,Positioning succeeded. Resuming cleaning.,community
+55,4.25,"Positioning succeeded, resuming returning to the dock.",Positioning succeeded. Resuming returning to the dock.,Positioning succeeded. Resuming returning to the dock.,community
+56,2.57,Start selected room cleaning.,Start selected room cleaning.,Start selected room cleaning.,community
+57,2.01,Start zoned cleaning.,Start zoned cleaning.,Start zoned cleaning.,community
+58,2.22,Proceed with cleaning task.,Proceed with cleaning task.,Proceed with cleaning task.,community
+61,1.94,Start mopping.,Start mopping.,Start mopping.,community
+62,3.17,Start remote control cleaning.,Start remote control cleaning.,Start remote control cleaning.,community
+64,5.88,Positioning failed. Map is invalid. Robot will return to dock.,Positioning failed. Map is invalid. Robot will return to dock.,Positioning failed. Map is invalid. Robot will return to dock.,community
+65,2.93,Resume returning to the dock.,Resume returning to the dock.,Resume returning to the dock.,community
+66,3.71,Filter worn out. Please replace it timely.,Filter worn out. Please replace it timely.,Filter worn out. Please replace it timely.,community
+67,4.16,Side brush worn out. Please replace it timely.,Side brush worn out. Please replace it timely.,Side brush worn out. Please replace it timely.,community
+68,4.33,Main brush worn out. Please replace it timely.,Main brush worn out. Please replace it timely.,Main brush worn out. Please replace it timely.,community
+71,3.62,Please check whether the laser distance sensor has any jammed item.,Laser sensor error. Please check and clean the laser sensor.,Laser sensor error. Please check and clean the laser sensor.,community
+72,4.70,Please check whether laser distance sensor cover is jammed.,Please check whether laser distance sensor cover is jammed.,Please check whether laser distance sensor cover is jammed.,community
+73,4.08,Edge sensor error. Please check and clean it.,Edge sensor error. Please check and clean it.,Edge sensor error. Please check and clean it.,community
+75,3.59,Filter may not be dry or may be blocked.,Filter may not be dry or may be blocked.,Filter may not be dry or may be blocked.,community
+77,4.00,Please start robot in non-carpet area.,Please start robot in non-carpet area.,Please start robot in non-carpet area.,community
+82,1.98,Start mapping.,Start mapping.,Start mapping.,community
+83,2.27,Proceed with mapping.,Proceed with mapping.,Proceed with mapping.,community
+84,2.18,Mapping completed.,Mapping completed.,Mapping completed.,community
+85,3.75,Positioning succeeded. Proceeding with mapping.,Positioning succeeded. Proceeding with mapping.,Positioning succeeded. Proceeding with mapping.,community
+86,3.59,Positioning failed. Restarting mapping.,Positioning failed. Restarting mapping.,Positioning failed. Restarting mapping.,community
+87,3.22,"Low battery, returning to the dock.",Low battery. Returning to the dock.,Low battery. Returning to the dock.,community
+91,3.07,"Clean water tank not installed, please install it.",Fresh tank not installed. Please install it.,Fresh tank not installed. Please install it.,community
+93,3.77,"Low water level in the clean water tank, please add water.",Low water level in fresh tank. Please add water.,Low water level in fresh tank. Please add water.,community
+97,3.37,Please install the dust collection bag.,Please install the dust collection bag.,Please install the dust collection bag.,community
+102,7.17,Dust collection bag full or air duct blocked. Please replace the bag or clean the air duct timely.,Dust collection bag full or air duct blocked. Please replace the bag or clean the air duct timely.,Dust collection bag full or air duct blocked. Please replace the bag or clean the air duct timely.,community
+105,1.60,Start cleaning.,Start cleaning.,Start cleaning.,community
+106,2.09,Start cleaning mop pads.,Start cleaning mop pads.,Start cleaning mop pads.,community
+107,2.61,Start dehydrating mop pads.,Start dehydrating mop pads.,Start dehydrating mop pads.,community
+108,4.98,An error in water level of washboard. Please clean it timely.,An error in water level of washboard. Please clean it timely.,An error in water level of washboard. Please clean it timely.,community
+109,3.72,"Used water tank error, please ensure it installed and empty.",Waste tank error. Please ensure it is installed and empty.,Waste tank error. Please ensure it is installed and empty.,community
+110,2.09,Start auto empty.,Start auto empty.,Start auto empty.,community
+111,4.50,Mop pads off. Please install them before resuming working.,Mop pads off. Please install them before resuming working.,Mop pads off. Please install them before resuming working.,community
+112,3.76,Please place the robot in the base station first.,Please place the robot in the base station first.,Please place the robot in the base station first.,community
+113,3.74,"Task completed, please empty the used water tank timely.",Task completed. Please empty waste tank timely.,Task completed. Please empty waste tank timely.,community
+114,1.93,Mop pads installed.,Mop pads installed.,Mop pads installed.,community
+115,1.91,Mop pads removed.,Mop pads removed.,Mop pads removed.,community
+116,2.79,"Child lock on, buttons locked.",Child lock on. Buttons locked.,Child lock on. Buttons locked.,community
+117,3.07,Child lock off. Buttons unlocked.,Child lock off. Buttons unlocked.,Child lock off. Buttons unlocked.,community
+118,4.14,Buttons locked. Press and hold the dock button to unlock.,Buttons locked. Press and hold the dock button to unlock.,Buttons locked. Press and hold the dock button to unlock.,community
+126,1.65,Start cleaning.,Start cleaning.,Start cleaning.,community
+127,1.86,Start spot cleaning.,start spot cleaning.,start spot cleaning.,community
+128,1.80,Start spot mopping.,Start spot mopping.,Start spot mopping.,community
+129,1.57,Start scheduled cleaning.,Start scheduled cleaning.,Start scheduled cleaning.,community
+130,1.71,Start scheduled mopping.,Start scheduled mopping.,Start scheduled mopping.,community
+133,2.36,Start selected room cleaning.,Start selected room cleaning.,Start selected room cleaning.,community
+134,2.25,Start selected room mopping.,Start selected room mopping.,Start selected room mopping.,community
+135,2.03,Start zoned cleaning.,Start zoned cleaning.,Start zoned cleaning.,community
+136,1.90,Start zoned mopping.,Start zoned mopping.,Start zoned mopping.,community
+137,1.22,Resume cleaning.,Resume cleaning.,Resume cleaning.,community
+138,1.36,Resume mopping.,Resume mapping.,Resume mapping.,community
+139,1.76,Returning.,Returning.,Returning.,community
+140,4.35,"New environment detected, returning to the base station.",New environment detected. Returning to the base station.,New environment detected. Returning to the base station.,community
+142,3.53,Mop pad worn out. Please replace it timely.,Mop pad worn out. Please replace it timely.,Mop pad worn out. Please replace it timely.,community
+143,1.37,Cleaning completed.,Cleaning completed.,Cleaning completed.,community
+144,1.46,Mopping completed.,Mopping completed.,Mopping completed.,community
+145,3.32,Positioning successful. Resume cleaning.,Positioning successful. Resume cleaning.,Positioning successful. Resume cleaning.,community
+146,3.19,Positioning successful. Resume mopping.,Positioning successful. Resume mapping.,Positioning successful. Resume mapping.,community
+148,2.54,Return to the base for self-cleaning.,Return to the base for self-cleaning.,Return to the base for self-cleaning.,community
+149,5.19,"Unable to reach the specified area, please try to clear obstacles in the path.",Unable to reach the specified area. Please try to clear obstacles in the path.,Unable to reach the specified area. Please try to clear obstacles in the path.,community
+150,6.05,"Unable to reach the specified area, please try to delete no-go zones in the path.",Unable to reach the specified area. Please try to delete no-go zones in the path.,Unable to reach the specified area. Please try to delete no-go zones in the path.,community
+151,5.00,The path is blocked. Please try to clear obstacles around your robot.,The path is blocked. Please try to clear obstacles around your robot.,The path is blocked. Please try to clear obstacles around your robot.,community
+152,7.26,The path is blocked. Please try to delete no-go zones or move your robot out of this area.,The path is blocked. Please try to delete no-go zones or move your robot out of this area.,The path is blocked. Please try to delete no-go zones or move your robot out of this area.,community
+153,6.32,Your robot is detected in the no-go zone. Please move your robot out of this area.,Your robot is detected in the no-go zone. Please move your robot out of this area.,Your robot is detected in the no-go zone. Please move your robot out of this area.,community
+156,2.33,The mop pad is not installed.,The mop pad is not installed.,The mop pad is not installed.,community
+162,1.39,Camera is on.,Camera is on.,Camera is on.,community
+163,1.75,Camera monitoring.,Camera monitoring.,Camera monitoring.,community
+164,1.40,Task ends.,Task ends.,Task ends.,community
+166,4.12,Please clean the foreign objects tangled in the mop pad.,Please clean the foreign objects tangled in the mop pad.,Please clean the foreign objects tangled in the mop pad.,community
+169,2.44,Mop pad drying complete.,Mop pad drying complete.,Mop pad drying complete.,community
+171,2.71,Intelligent obstacle avoidance function on.,AI recognition function on.,AI recognition function on.,community
+172,2.81,Intelligent obstacle avoidance function off.,AI recognition function off.,AI recognition function off.,community
+173,2.86,Please replace the silver ion sterilizer.,Please replace the Silver Ion sterilizer.,Please replace the Silver Ion sterilizer.,community
+177,2.17,Leaving the base station.,Leaving the base station.,Leaving the base station.,community
+179,10.48,Mop pad cleaned. The water in the clean water tank is insufficient. Please fill the clean water tank and empty the used water tank.,Mop pad cleaned. The water in the clean water tank is insufficient. Please fill the clean water tank and empty the used water tank.,Mop pad cleaned. The water in the clean water tank is insufficient. Please fill the clean water tank and empty the used water tank.,community
+181,4.64,Insufficient water. Please fill the clean water tank.,Insufficient water. Please fill the clean water tank.,Insufficient water. Please fill the clean water tank.,community
+186,2.11,Please check the clean water tank.,Please check the fresh tank.,Please check the fresh tank.,community
+187,3.35,It will take about 5 to 10 minutes.,It will take about five to ten minutes.,It will take about five to ten minutes.,community
+188,2.74,Automatic docking engaged.,Automatic docking engaged.,Automatic docking engaged.,community
+190,1.82,"OK, start cleaning.",,"OK, start cleaning.",whisper
+191,2.50,"OK, start vacuuming and mopping.",,"OK, start vacuuming and mopping.",whisper
+192,1.85,"OK, start mopping.",,"OK, start mopping.",whisper
+193,2.02,"OK, start vacuuming.",,"OK, start vacuuming.",whisper
+194,1.15,Have been cleaning.,,Have been cleaning.,whisper
+195,3.86,"Okay, start to clean the room. Make sure the door is open.",,"Okay, start to clean the room. Make sure the door is open.",whisper
+196,3.72,"Okay, start to vacuum the floor. Make sure the door is open.",,"Okay, start to vacuum the floor. Make sure the door is open.",whisper
+197,3.94,"Okay, start to mop the floor. Make sure the door is open.",,"Okay, start to mop the floor. Make sure the door is open.",whisper
+198,4.10,"Okay, start to vacuum and mop the floor. Make sure the door is open.",,"Okay, start to vacuum and mop the floor. Make sure the door is open.",whisper
+199,4.18,"Unable to recognize this room, please open the app to check the room name.",,"Unable to recognize this room, please open the app to check the room name.",whisper
+200,3.19,"Ho, ho, ho, ho.",Shutdown sound,Shutdown sound,community
+201,1.82,"OK, continue working.",,"OK, continue working.",whisper
+202,3.48,"Okay, task is ended. Start returning to charge.",,"Okay, task is ended. Start returning to charge.",whisper
+203,2.04,"OK, heading back to charge.",,"OK, heading back to charge.",whisper
+204,3.82,"Okay, start mapping. Please make sure all doors are open.",,"Okay, start mapping. Please make sure all doors are open.",whisper
+205,2.28,"OK, exit the base station.",,"OK, exit the base station.",whisper
+206,2.04,"Okay, I'll try to find you.",,"Okay, I'll try to find you.",whisper
+207,3.60,"Sorry, I can't find you. Please stand within my sight.",,"Sorry, I can't find you. Please stand within my sight.",whisper
+208,2.04,"Found you, coming to clean now.",,"Found you, coming to clean now.",whisper
+209,3.48,"Okay, returning to the dock to clean the mop pad.",,"Okay, returning to the dock to clean the mop pad.",whisper
+210,1.70,Start mop pad's washing.,,Start mop pad's washing.,whisper
+211,3.98,"Sorry, self-empty and can only be done when I'm inside the dock.",,"Sorry, self-empty and can only be done when I'm inside the dock.",whisper
+212,2.21,"OK, start auto emptying.",,"OK, start auto emptying.",whisper
+213,3.60,"Sorry, drying can only be done when I'm inside the dock.",,"Sorry, drying can only be done when I'm inside the dock.",whisper
+214,1.46,Drying in progress.,,Drying in progress.,whisper
+215,1.85,"OK, start drying.",,"OK, start drying.",whisper
+216,2.93,"Sorry, need to install the mop pad first.",,"Sorry, need to install the mop pad first.",whisper
+217,1.97,Maximum suction power reached.,,Maximum suction power reached.,whisper
+218,1.85,Minimum suction power reached.,,Minimum suction power reached.,whisper
+219,1.70,Maximum humidity reached.,,Maximum humidity reached.,whisper
+220,1.56,Minimum humidity reached.,,Minimum humidity reached.,whisper
+221,0.72,OK.,,OK.,whisper
+222,1.80,The suction mode is quiet.,,The suction mode is quiet.,whisper
+223,1.87,The suction mode is standard.,,The suction mode is standard.,whisper
+224,1.82,The suction mode is strong.,,The suction mode is strong.,whisper
+225,1.90,The suction mode is turbo.,,The suction mode is turbo.,whisper
+226,2.06,The mop pad is slightly dry.,,The mop pad is slightly dry.,whisper
+227,1.73,The mop pad is moist.,,The mop pad is moist.,whisper
+228,1.61,The mop pad is wet.,,The mop pad is wet.,whisper
+229,1.06,Today is ...,,Today is ...,whisper
+230,3.07,"Today is February 21, 2022.",,"Today is February 21, 2022.",whisper
+231,1.32,Today is Monday.,,Today is Monday.,whisper
+232,1.42,Today is Tuesday.,,Today is Tuesday.,whisper
+233,1.37,Today is Wednesday.,,Today is Wednesday.,whisper
+234,1.39,Today is Thursday.,,Today is Thursday.,whisper
+235,1.32,Today is Friday.,,Today is Friday.,whisper
+236,1.39,Today is Saturday.,,Today is Saturday.,whisper
+237,1.30,Today is Sunday.,,Today is Sunday.,whisper
+238,2.09,"Okay, the task is paused.",,"Okay, the task is paused.",whisper
+244,2.15,Detergent bottle installed.,Detergent bottle installed.,Detergent bottle installed.,community
+245,4.22,"The number of maps has reached the limit, please delete a map and try again.",,"The number of maps has reached the limit, please delete a map and try again.",whisper
+246,0.79,I'm here.,,I'm here.,whisper
+247,2.06,"Sorry, I can't understand.",,"Sorry, I can't understand.",whisper
+248,3.50,"Mop pad not installed, please install it and try again.",,"Mop pad not installed, please install it and try again.",whisper
+249,3.24,"I'm working, please end the current task and retry.",,"I'm working, please end the current task and retry.",whisper
+250,5.54,"Currently in mopping mode now, please switch to vacuuming mode or vacuuming in mopping mode first.",,"Currently in mopping mode now, please switch to vacuuming mode or vacuuming in mopping mode first.",whisper
+251,5.57,"Currently in vacuuming mode now, please switch to mopping mode or vacuuming in mopping mode first.",,"Currently in vacuuming mode now, please switch to mopping mode or vacuuming in mopping mode first.",whisper
+252,3.05,Finished. Exited the customized cleaning mode.,,Finished. Exited the customized cleaning mode.,whisper
+253,1.63,Maximum volume reached.,,Maximum volume reached.,whisper
+254,1.51,Minimum volume reached.,,Minimum volume reached.,whisper
+255,5.23,"Sorry, this task can only be performed when intelligent obstacle avoidance is enabled.",,"Sorry, this task can only be performed when intelligent obstacle avoidance is enabled.",whisper
+257,2.10,Camera monitoring exited.,Camera monitoring exited.,Camera monitoring exited.,community
+258,2.79,Self-positioned. Cruising started.,Self-positioned. Cruising started.,Self-positioned. Cruising started.,community
+259,3.96,Self-positioned. Proceeding to the designated location.,Self-positioned. Proceeding to the designated location.,Self-positioned. Proceeding to the designated location.,community
+260,3.37,"Self-positioned, cruising resumed.",Self-positioned. Cruising resumed.,Self-positioned. Cruising resumed.,community
+261,4.50,Self-positioned. Resume proceeding to the designated location.,Self-positioned. Resume proceeding to the designated location.,Self-positioned. Resume proceeding to the designated location.,community
+262,2.05,Self-positioning failed.,Self-positioning failed.,Self-positioning failed.,community
+266,2.25,Please replace the detergent.,Please replace the detergent.,Please replace the detergent.,community
+267,2.25,Please clean the sensors.,Please clean the sensors.,Please clean the sensors.,community
+269,4.15,Please try again after the current task is complete.,,Please try again after the current task is complete.,whisper
+274,1.51,Ding!,Ding!,Ding!,community
+275,4.99,"Sorry, this command is not supported. You can open the app for more voice commands.",,"Sorry, this command is not supported. You can open the app for more voice commands.",whisper
+276,2.78,"Sorry, robot isn't performing this task.",,"Sorry, robot isn't performing this task.",whisper
+277,2.38,"Okay, I'm coming to clean up there.",,"Okay, I'm coming to clean up there.",whisper
+278,2.23,"OK, drying task ended.",,"OK, drying task ended.",whisper
+279,3.48,"Robot is vacuuming, please end the task and try again.",,"Robot is vacuuming, please end the task and try again.",whisper
+280,1.92,Start custom cleaning.,Start custom cleaning.,Start custom cleaning.,community
+283,4.08,The robot is not in the base station. Please try again later.,The robot is not in the base station. Please try again later.,The robot is not in the base station. Please try again later.,community
+284,2.78,"Okay, I'll end the task and come to clean.",,"Okay, I'll end the task and come to clean.",whisper
+285,2.69,Please stay put for a moment while I locate you.,,Please stay put for a moment while I locate you.,whisper
+286,2.66,"Sorry, please create a map and try again.",,"Sorry, please create a map and try again.",whisper
+287,2.33,"Okay, have switched to quiet mode.",,"Okay, have switched to quiet mode.",whisper
+288,2.35,"OK, have switched to standard mode.",,"OK, have switched to standard mode.",whisper
+289,2.28,"Okay, have switched to strong mode.",,"Okay, have switched to strong mode.",whisper
+290,2.33,"OK, have switched to turbo mode.",,"OK, have switched to turbo mode.",whisper
+291,2.62,"OK, have switched to slightly dry mode.",,"OK, have switched to slightly dry mode.",whisper
+292,2.18,"Okay, have switched to wet mode.",,"Okay, have switched to wet mode.",whisper
+293,1.48,Calling enabled.,Calling enabled.,Calling enabled.,community
+294,1.53,Calling disabled.,Calling disabled.,Calling disabled.,community
+296,4.63,"Used water tank error, please check whether the used water tank is full.",Used water tank error. Please check whether the used water tank is full.,Used water tank error. Please check whether the used water tank is full.,community
+297,5.93,"Detergent bottle installed. If the detergent has never been used, please reset in the app.","Detergent bottle installed. If the detergent has never been used, please reset in the app.","Detergent bottle installed. If the detergent has never been used, please reset in the app.",community
+298,1.94,Start cleaning washboard base.,"Base station self-cleaning starts. Please clean its inside with a brush or cloth. After 3 minutes, sewage in the washboard will be drained.","Base station self-cleaning starts. Please clean its inside with a brush or cloth. After 3 minutes, sewage in the washboard will be drained.",community
+299,3.43,Detergent bottle and the auto adding module installed.,Detergent bottle and the auto-adding module installed.,Detergent bottle and the auto-adding module installed.,community
+300,2.62,Your robot doesn't support this accessory.,,Your robot doesn't support this accessory.,whisper
+301,0.96,I'm charging.,,I'm charging.,whisper
+302,0.91,I'm working.,,I'm working.,whisper
+303,1.15,I'm in a daze.,,I'm in a daze.,whisper
+304,1.27,Network connected.,,Network connected.,whisper
+305,9.05,"OK, start cleaning washboard base. Please clean it's inside with a brush or cloth. After three minutes, sewage in the washboard base will be drained.",,"OK, start cleaning washboard base. Please clean it's inside with a brush or cloth. After three minutes, sewage in the washboard base will be drained.",whisper
+306,4.42,"Sorry, I can't understand. Please configure the network and retry.",,"Sorry, I can't understand. Please configure the network and retry.",whisper
+307,0.96,I'm charging.,,I'm charging.,whisper
+308,4.03,"Sorry, I didn't catch that. Please wake me up again and retry.",,"Sorry, I didn't catch that. Please wake me up again and retry.",whisper
+309,1.68,"Found you, I'm coming.",,"Found you, I'm coming.",whisper
+310,2.66,"Okay, I'm leaving this area right away.",,"Okay, I'm leaving this area right away.",whisper
+312,4.92,"Usage information of this accessory isn't available, please replace it as you need.",,"Usage information of this accessory isn't available, please replace it as you need.",whisper
+313,4.68,"Sorry, network is poor. Please move me to an area with a better signal.",,"Sorry, network is poor. Please move me to an area with a better signal.",whisper
+314,2.86,"Not supported, you can ask me to turn around.",,"Not supported, you can ask me to turn around.",whisper
+315,4.15,"Mop pad is not in the dock, please retry after putting it in the dock.",,"Mop pad is not in the dock, please retry after putting it in the dock.",whisper
+317,5.93,"Not supported, the robot is performing the customized cleaning task. Please go to the app to edit.",,"Not supported, the robot is performing the customized cleaning task. Please go to the app to edit.",whisper
+318,2.23,Mop pad has been cleaned.,Task completed.,Task completed.,community
+321,2.47,Start intensive mopping for stains.,,Start intensive mopping for stains.,whisper
+322,4.97,"Sorry, I can't understand. You can open the app for all available voice commands.",,"Sorry, I can't understand. You can open the app for all available voice commands.",whisper
+323,6.84,"Sorry, I can't understand. You can say, hi, dream, what can you do to learn all my functions?",,"Sorry, I can't understand. You can say, hi, dream, what can you do to learn all my functions?",whisper
+324,3.96,"I'm washing the mop pad, please wake me up after washing is done.",,"I'm washing the mop pad, please wake me up after washing is done.",whisper
+328,3.05,"Sorry, please give this command only when I'm cleaning.",,"Sorry, please give this command only when I'm cleaning.",whisper
+329,3.72,Start self-testing. Please don't move me away from the base station.,Start self-testing. Please don't move me away from the base station.,Start self-testing. Please don't move me away from the base station.,community
+330,2.47,Please retry after self-test completed.,Please retry after self-test completed.,Please retry after self-test completed.,community
+331,3.31,"No error found, please rest assured to use the device.",No error found. Please rest assured to use the device.,No error found. Please rest assured to use the device.,community
+332,3.43,"One error found, please go to the app to see more details.",One error found. Please go to the app to see more details.,One error found. Please go to the app to see more details.,community
+338,1.42,Video call connected.,,Video call connected.,whisper
+339,1.13,Call declined.,,Call declined.,whisper
+340,1.20,No response.,,No response.,whisper
+344,2.66,"Okay, start mopping after vacuuming.",,"Okay, start mopping after vacuuming.",whisper
+346,2.56,This is the bin. See you next time.,,This is the bin. See you next time.,whisper
+356,3.67,"Fault still exists, the scheduled task has been canceled.",,"Fault still exists, the scheduled task has been canceled.",whisper
+360,1.78,Robot water tank draining.,,Robot water tank draining.,whisper
+361,2.38,Robot water tank drainage completed.,,Robot water tank drainage completed.,whisper
+363,3.29,"Vacuuming task completed, robot will start mopping.",,"Vacuuming task completed, robot will start mopping.",whisper
+364,2.52,Start setting the video activation code.,,Start setting the video activation code.,whisper
+365,2.38,Live video function has been disabled.,,Live video function has been disabled.,whisper
+366,2.28,"Stain detected, start cleaning.",,"Stain detected, start cleaning.",whisper
+367,2.16,"OK, start stain cleaning.",,"OK, start stain cleaning.",whisper
+368,3.24,Stain detected. I'll clean it after washing them up.,,Stain detected. I'll clean it after washing them up.,whisper
+369,2.11,"OK, start spot cleaning.",,"OK, start spot cleaning.",whisper
+371,1.61,Please remove the washboard.,,Please remove the washboard.,whisper
+372,1.90,Clean water starts outflowing.,,Clean water starts outflowing.,whisper
+373,7.20,"Clean water outflowing process ended, please wait for 10 seconds and then clean the base station after the dirts are soaked.",,"Clean water outflowing process ended, please wait for 10 seconds and then clean the base station after the dirts are soaked.",whisper
+374,7.27,Please use a brush or cloth to clean the bottom of the base station within 20 seconds. Then the sewage will be pumped out automatically.,,Please use a brush or cloth to clean the bottom of the base station within 20 seconds. Then the sewage will be pumped out automatically.,whisper
+375,4.99,"Please push the dirts to the pumping port, the pumping process will last for 30 seconds.",,"Please push the dirts to the pumping port, the pumping process will last for 30 seconds.",whisper
+376,4.44,"Pumping process ended, please clean the washboard separately and install it back.",,"Pumping process ended, please clean the washboard separately and install it back.",whisper
+377,3.84,"Unable to configure the network, please contact customer service.",,"Unable to configure the network, please contact customer service.",whisper
+378,4.15,"Run password, fail to connect to the network, please reconfigure.",,"Run password, fail to connect to the network, please reconfigure.",whisper
+379,7.99,"No wireless network found, please connect to the 2.4 GHz Wi-Fi band, try again after placing the robot close to the router.",,"No wireless network found, please connect to the 2.4 GHz Wi-Fi band, try again after placing the robot close to the router.",whisper
+380,3.98,"Fail to obtain the IP address, please check the router settings.",,"Fail to obtain the IP address, please check the router settings.",whisper
+381,4.30,"Fail to connect to the EMQ server, please contact customer service.",,"Fail to connect to the EMQ server, please contact customer service.",whisper
+382,4.15,Fail to connect to the network. Please check whether the network works normally.,,Fail to connect to the network. Please check whether the network works normally.,whisper
+383,3.84,"Unable to configure the network, please contact customer service.",,"Unable to configure the network, please contact customer service.",whisper
+384,4.85,No water in the clean water tank of the automatic water supply and drainage device.,,No water in the clean water tank of the automatic water supply and drainage device.,whisper
+385,1.87,Start connecting to the network.,,Start connecting to the network.,whisper
+388,4.10,"Hidden area, please move the robot to the available area and retry.",,"Hidden area, please move the robot to the available area and retry.",whisper
+392,3.84,Adjusting cleaning parameters is not supported in clean genius mode.,,Adjusting cleaning parameters is not supported in clean genius mode.,whisper
+396,5.16,"Start emptying the water supply and drainage module, which is expected to take three minutes.",,"Start emptying the water supply and drainage module, which is expected to take three minutes.",whisper
+397,2.52,Drainage of upper and lower water completed.,,Drainage of upper and lower water completed.,whisper
+426,3.67,"I've slipped and gotten stuck, I'll keep trying to free myself.",,"I've slipped and gotten stuck, I'll keep trying to free myself.",whisper
+433,1.46,Start extra cleaning.,,Start extra cleaning.,whisper
+434,3.65,"Extra cleaning completed, original cleaning task continues.",,"Extra cleaning completed, original cleaning task continues.",whisper
+435,1.49,Leaving the current area.,,Leaving the current area.,whisper
+440,4.66,"Robots' wheels suspended, please move it to an open area and restart the task.",,"Robots' wheels suspended, please move it to an open area and restart the task.",whisper
+441,3.98,"Main brush entangled, please remove and clean it before reinstalling.",,"Main brush entangled, please remove and clean it before reinstalling.",whisper
+442,4.03,"Side brush entangled, please remove and clean it before reinstalling.",,"Side brush entangled, please remove and clean it before reinstalling.",whisper
+444,3.94,Please place the robot in an open area before starting the task.,,Please place the robot in an open area before starting the task.,whisper
+445,4.30,"Mop has fallen off, please find it around robot and reinstall it.",,"Mop has fallen off, please find it around robot and reinstall it.",whisper
+447,4.20,"Dock is not powered on, please check and put robot back to charge.",,"Dock is not powered on, please check and put robot back to charge.",whisper
+451,5.69,"Unable to start tasks in hidden area, please move robot to other areas and restart the task.",,"Unable to start tasks in hidden area, please move robot to other areas and restart the task.",whisper
+460,4.58,"Used water tank deodorizer is worn out, please replace it timely.",,"Used water tank deodorizer is worn out, please replace it timely.",whisper
+488,2.63,Microsoft Office Word Document MSWordDoc Word.Document.8,,Microsoft Office Word Document MSWordDoc Word.Document.8,whisper
+489,4.63,"Currently in clean genius mode, please tell me to end the task and try again.",,"Currently in clean genius mode, please tell me to end the task and try again.",whisper
+490,3.55,"OK, enter customize cleaning mode, start mopping.",,"OK, enter customize cleaning mode, start mopping.",whisper
+491,3.72,"OK, enter customized cleaning mode, start vacuuming.",,"OK, enter customized cleaning mode, start vacuuming.",whisper
+492,3.94,"Okay, start to clean the living room. Make sure the door is open.",,"Okay, start to clean the living room. Make sure the door is open.",whisper
+493,3.86,"Okay, start to clean the bedroom. Make sure the door is open.",,"Okay, start to clean the bedroom. Make sure the door is open.",whisper
+494,4.08,"Okay, start to clean the master room. Make sure the door is open.",,"Okay, start to clean the master room. Make sure the door is open.",whisper
+495,3.98,"Okay, start to clean the guest room. Make sure the door is open.",,"Okay, start to clean the guest room. Make sure the door is open.",whisper
+496,3.82,"Okay, start to clean the study. Make sure the door is open.",,"Okay, start to clean the study. Make sure the door is open.",whisper
+497,3.82,"Okay, start to clean the kitchen. Make sure the door is open.",,"Okay, start to clean the kitchen. Make sure the door is open.",whisper
+498,4.03,"Okay, start to clean the dining room. Make sure the door is open.",,"Okay, start to clean the dining room. Make sure the door is open.",whisper
+499,3.94,"Okay, start to clean the bathroom. Make sure the door is open.",,"Okay, start to clean the bathroom. Make sure the door is open.",whisper
+500,3.94,"Okay, start to clean the balcony. Make sure the door is open.",,"Okay, start to clean the balcony. Make sure the door is open.",whisper
+501,3.89,"Okay, start to clean the hallway. Make sure the door is open.",,"Okay, start to clean the hallway. Make sure the door is open.",whisper
+502,4.18,"Okay, start to clean the utility room. Make sure the door is open.",,"Okay, start to clean the utility room. Make sure the door is open.",whisper
+503,3.91,"Okay, start to clean the closet. Make sure the door is open.",,"Okay, start to clean the closet. Make sure the door is open.",whisper
+504,4.06,"Okay, start to clean the drawing room. Make sure the door is open.",,"Okay, start to clean the drawing room. Make sure the door is open.",whisper
+505,3.91,"Okay, start to clean the office. Make sure the door is open.",,"Okay, start to clean the office. Make sure the door is open.",whisper
+506,3.74,"Okay, start to clean the gym. Make sure the door is open.",,"Okay, start to clean the gym. Make sure the door is open.",whisper
+507,4.39,"Okay, start to clean the recreation area. Make sure the door is open.",,"Okay, start to clean the recreation area. Make sure the door is open.",whisper
+508,2.21,"OK, I've turned up the volume.",,"OK, I've turned up the volume.",whisper
+509,2.28,"Okay, I've turned down the volume.",,"Okay, I've turned down the volume.",whisper
+510,1.99,"Okay, I've ended the work.",,"Okay, I've ended the work.",whisper
+511,2.64,"Sorry, I am not performing a task now.",,"Sorry, I am not performing a task now.",whisper
+512,3.70,"Map doesn't include pet furniture yet, please add it in the app.",,"Map doesn't include pet furniture yet, please add it in the app.",whisper
+513,2.81,"Okay, heading to clean around the pet furniture.",,"Okay, heading to clean around the pet furniture.",whisper
+516,1.46,Start finding pets.,,Start finding pets.,whisper
+517,3.26,"Find your pets successfully, start returning to charge.",,"Find your pets successfully, start returning to charge.",whisper
+518,2.76,"No pets found, start returning to charge.",,"No pets found, start returning to charge.",whisper
+526,2.28,Battery level is 100 percent.,,Battery level is 100 percent.,whisper
+527,2.30,Battery level is 99 percent.,,Battery level is 99 percent.,whisper
+528,2.28,Battery level is 98 percent.,,Battery level is 98 percent.,whisper
+529,2.40,Battery level is 97 percent.,,Battery level is 97 percent.,whisper
+530,2.35,Battery level is 96 percent.,,Battery level is 96 percent.,whisper
+531,2.35,Battery level is 95 percent.,,Battery level is 95 percent.,whisper
+532,2.30,Battery level is 94 percent.,,Battery level is 94 percent.,whisper
+533,2.33,Battery level is 93 percent.,,Battery level is 93 percent.,whisper
+534,2.30,Battery level is 92 percent.,,Battery level is 92 percent.,whisper
+535,2.30,Battery level is 91 percent.,,Battery level is 91 percent.,whisper
+536,2.11,Battery level is 90 percent.,,Battery level is 90 percent.,whisper
+537,2.23,Battery level is 89 percent.,,Battery level is 89 percent.,whisper
+538,2.21,Battery level is 88%.,,Battery level is 88%.,whisper
+539,2.30,Battery level is 87 percent.,,Battery level is 87 percent.,whisper
+540,2.28,Battery level is 86 percent.,,Battery level is 86 percent.,whisper
+541,2.28,Battery level is 85 percent.,,Battery level is 85 percent.,whisper
+542,2.23,Battery level is 84 percent.,,Battery level is 84 percent.,whisper
+543,2.26,Battery level is 83 percent.,,Battery level is 83 percent.,whisper
+544,2.23,Battery level is 82 percent.,,Battery level is 82 percent.,whisper
+545,2.23,Battery level is 81 percent.,,Battery level is 81 percent.,whisper
+546,2.04,Battery level is 80 percent.,,Battery level is 80 percent.,whisper
+547,2.38,Battery level is 79 percent.,,Battery level is 79 percent.,whisper
+548,2.33,Battery level is 78 percent.,,Battery level is 78 percent.,whisper
+549,2.45,Battery level is 77%.,,Battery level is 77%.,whisper
+550,2.38,Battery level is 76 percent.,,Battery level is 76 percent.,whisper
+551,2.40,Battery level is 75 percent.,,Battery level is 75 percent.,whisper
+552,2.35,Battery level is 74 percent.,,Battery level is 74 percent.,whisper
+553,2.38,Battery level is 73 percent.,,Battery level is 73 percent.,whisper
+554,2.33,Battery level is 72 percent.,,Battery level is 72 percent.,whisper
+555,2.35,Battery level is 71 percent.,,Battery level is 71 percent.,whisper
+556,2.16,Battery level is 70%.,,Battery level is 70%.,whisper
+557,2.33,Battery level is 69 percent.,,Battery level is 69 percent.,whisper
+558,2.30,Battery level is 68 percent.,,Battery level is 68 percent.,whisper
+559,2.40,Battery level is 67%.,,Battery level is 67%.,whisper
+560,2.35,Battery level is 66 percent.,,Battery level is 66 percent.,whisper
+561,2.38,Battery level is 65 percent.,,Battery level is 65 percent.,whisper
+562,2.33,Battery level is 64 percent.,,Battery level is 64 percent.,whisper
+563,2.35,Battery level is 63 percent.,,Battery level is 63 percent.,whisper
+564,2.30,Battery level is 62 percent.,,Battery level is 62 percent.,whisper
+565,2.33,Battery level is 61 percent.,,Battery level is 61 percent.,whisper
+566,2.14,Battery level is 60%.,,Battery level is 60%.,whisper
+567,2.30,Battery level is 59%.,,Battery level is 59%.,whisper
+568,2.30,Battery level is 58%.,,Battery level is 58%.,whisper
+569,2.40,Battery level is 57%.,,Battery level is 57%.,whisper
+570,2.33,Battery level is 56 percent.,,Battery level is 56 percent.,whisper
+571,2.33,Battery level is 55 percent.,,Battery level is 55 percent.,whisper
+572,2.30,Battery level is 54 percent.,,Battery level is 54 percent.,whisper
+573,2.30,Battery level is 53 percent.,,Battery level is 53 percent.,whisper
+574,2.28,Battery level is 52 percent.,,Battery level is 52 percent.,whisper
+575,2.30,Battery level is 51 percent.,,Battery level is 51 percent.,whisper
+576,2.11,Battery level is 50 percent.,,Battery level is 50 percent.,whisper
+577,2.30,Battery level is 49 percent.,,Battery level is 49 percent.,whisper
+578,2.28,Battery level is 48 percent.,,Battery level is 48 percent.,whisper
+579,2.38,Battery level is 47 percent.,,Battery level is 47 percent.,whisper
+580,2.33,Battery level is 46 percent.,,Battery level is 46 percent.,whisper
+581,2.33,Battery level is 45 percent.,,Battery level is 45 percent.,whisper
+582,2.30,Battery level is 44 percent.,,Battery level is 44 percent.,whisper
+583,2.30,Battery level is 43 percent.,,Battery level is 43 percent.,whisper
+584,2.28,Battery level is 42 percent.,,Battery level is 42 percent.,whisper
+585,2.28,Battery level is 41 percent.,,Battery level is 41 percent.,whisper
+586,2.11,Battery level is 40 percent.,,Battery level is 40 percent.,whisper
+587,2.28,Battery level is 39 percent.,,Battery level is 39 percent.,whisper
+588,2.23,Battery level is 38 percent.,,Battery level is 38 percent.,whisper
+589,2.35,Battery level is 37%.,,Battery level is 37%.,whisper
+590,2.30,Battery level is 36 percent.,,Battery level is 36 percent.,whisper
+591,2.30,Battery level is 35 percent.,,Battery level is 35 percent.,whisper
+592,2.28,Battery level is 34 percent.,,Battery level is 34 percent.,whisper
+593,2.28,Battery level is 33 percent.,,Battery level is 33 percent.,whisper
+594,2.26,Battery level is 32 percent.,,Battery level is 32 percent.,whisper
+595,2.28,Battery level is 31 percent.,,Battery level is 31 percent.,whisper
+596,2.09,Battery level is 30 percent.,,Battery level is 30 percent.,whisper
+597,2.30,Battery level is 29 percent.,,Battery level is 29 percent.,whisper
+598,2.26,Battery level is 28 percent.,,Battery level is 28 percent.,whisper
+599,2.38,Battery level is 27 percent.,,Battery level is 27 percent.,whisper
+600,2.30,Battery level is 26 percent.,,Battery level is 26 percent.,whisper
+601,2.30,Battery level is 25 percent.,,Battery level is 25 percent.,whisper
+602,2.28,Battery level is 24 percent.,,Battery level is 24 percent.,whisper
+603,2.30,Battery level is 23 percent.,,Battery level is 23 percent.,whisper
+604,2.28,Battery level is 22 percent.,,Battery level is 22 percent.,whisper
+605,2.28,Battery level is 21 percent.,,Battery level is 21 percent.,whisper
+606,2.09,Battery level is 20 percent.,,Battery level is 20 percent.,whisper
+607,2.23,Battery level is 19 percent.,,Battery level is 19 percent.,whisper
+608,2.16,Battery level is 18 percent.,,Battery level is 18 percent.,whisper
+609,2.28,Battery level is 17 percent.,,Battery level is 17 percent.,whisper
+610,2.23,Battery level is 16 percent.,,Battery level is 16 percent.,whisper
+611,2.21,Battery level is 15 percent.,,Battery level is 15 percent.,whisper
+612,2.23,Battery level is 14 percent.,,Battery level is 14 percent.,whisper
+613,2.21,Battery level is 13 percent.,,Battery level is 13 percent.,whisper
+614,2.06,Battery level is 12 percent.,,Battery level is 12 percent.,whisper
+615,2.11,Battery level is 11 percent.,,Battery level is 11 percent.,whisper
+616,1.99,Battery level is 10 percent.,,Battery level is 10 percent.,whisper
+617,2.04,Battery level is 9 percent.,,Battery level is 9 percent.,whisper
+618,1.97,Battery level is 8 percent.,,Battery level is 8 percent.,whisper
+619,2.09,Battery level is 7%.,,Battery level is 7%.,whisper
+620,2.02,Battery level is 6 percent.,,Battery level is 6 percent.,whisper
+621,2.06,Battery level is 5%.,,Battery level is 5%.,whisper
+622,2.02,Battery level is 4%.,,Battery level is 4%.,whisper
+623,2.02,Battery level is 3%.,,Battery level is 3%.,whisper
+624,1.97,Battery level is 2%.,,Battery level is 2%.,whisper
+625,2.02,Battery level is 1%.,,Battery level is 1%.,whisper
+626,2.14,Battery level is zero percent.,,Battery level is zero percent.,whisper
+636,4.46,"The mop is dirty, please move robot to the dock for automatic mop washing.",,"The mop is dirty, please move robot to the dock for automatic mop washing.",whisper
+638,1.61,Resuming auto empty.,,Resuming auto empty.,whisper

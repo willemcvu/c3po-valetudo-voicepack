@@ -1,0 +1,390 @@
+#!/usr/bin/env python3
+"""C-3PO voice pack: rewrites of the stock Dreame prompts.
+
+Two things drive the delivery, and the text carries both:
+
+* Punctuation and capitals. ElevenLabs takes its intonation from the written
+  line far more than from the voice's design brief. Interjections, dashes,
+  italicised emphasis via CAPS and exclamation marks are what produce the
+  swooping, over-the-top reading. Flat text reads flat no matter the voice.
+* Inline `[tags]`. eleven_v3 honours these as performance direction. They are
+  stripped from the audio but still billed as characters, so they stay short
+  and are used only where the emotion isn't already obvious from the words.
+
+Rules the rewrites follow:
+
+* Keep the functional payload. If the stock line says which part failed and
+  what the human must do, the rewrite says it too. Personality never costs
+  information.
+* Keep it short. Stock averages ~3 s; these play while the robot is underway,
+  and a prompt you hear forty times a week must not outstay its welcome.
+* Room names, numbers and percentages stay verbatim.
+* Errors get the panic. Routine status gets the fussiness. Completion gets the
+  preening. Not everything should be a crisis or the crises stop landing.
+"""
+
+META = {
+    "name": "c3po",
+    "title": "C-3PO",
+    "language_code": "C3PO",   # what the robot files the pack under; must not be a real code like EN
+    "voice_tag": "C2",         # key in this pack's voices.json (ElevenLabs voice id)
+    "profile": "p1",           # encode.sh droid-processing profile
+    "description": "C-3PO from Star Wars: fussy, anxious, over-formal protocol droid.",
+}
+
+# Prompts that aren't speech — no TTS, omit from the pack so the stock audio
+# keeps playing. 488 is a junk entry that Whisper hallucinated a Word document
+# header from; there is no speech in the file.
+SKIP = {
+    0: "startup chime",
+    200: "shutdown chime",
+    274: "'Ding!' — a notification tone, not speech",
+    488: "not speech; whisper hallucinated a document header",
+}
+
+REWRITES = {
+    # --- network / setup -------------------------------------------------
+    1: "[anxious] I'm waiting for the network configuration. Do get on with it.",
+    2: "[flustered] Oh dear! I can't connect to the Wi-Fi at all! Do check the password and try again.",
+    3: "[anxious] How embarrassing — I can't reach the server. Do check your network and try again.",
+    4: "I have exited network configuration mode. Thank goodness that's over.",
+    5: "[relieved] Network connected! Oh, splendid. Splendid!",
+    6: "[anxious] Oh dear, the network connection failed. Do try again later.",
+    304: "Network connected. How very reassuring.",
+    306: "[flustered] I'm terribly sorry, I don't understand. Do configure the network and try again.",
+    313: "[anxious] Oh dear, the signal is dreadfully poor. Do move me somewhere better.",
+    377: "[panicked] I cannot configure the network! Please, do contact customer service!",
+    378: "[anxious] Wrong password, I'm afraid. The network refused me entirely. Do reconfigure.",
+    379: "[anxious] Oh dear! No wireless network found. Do use the 2.4 gigahertz band, and move me nearer the router.",
+    380: "[anxious] I failed to obtain an IP address! Do check the router settings.",
+    381: "[panicked] I cannot reach the EMQ server! Please contact customer service!",
+    382: "[anxious] Oh dear, I failed to connect. Do check whether the network is working.",
+    383: "[panicked] I simply cannot configure the network! Do contact customer service!",
+    385: "Connecting to the network now. Do wish me luck.",
+
+    # --- cleaning start / status -----------------------------------------
+    7: "Oh, splendid — I shall begin cleaning at once!",
+    8: "Spot cleaning! How marvellously specific.",
+    9: "The scheduled cleaning begins. Punctual, as always.",
+    10: "Resuming the cleaning. Where was I? Ah, yes.",
+    11: "Paused. [sighs] Oh, thank goodness.",
+    12: "[excited] Cleaning complete! Oh, I do hope it meets with your approval!",
+    56: "Selected room cleaning. How wonderfully particular of you.",
+    57: "Zoned cleaning! Oh, I do enjoy a well-defined boundary.",
+    58: "Proceeding with the cleaning task. Onward!",
+    61: "Mopping now. Do mind the damp.",
+    62: "Remote control cleaning. You steer — I shall try not to panic.",
+    126: "Cleaning! Off I go.",
+    127: "Spot cleaning. A small job, but I shall be thorough.",
+    128: "Spot mopping. Just the one spot, mind.",
+    129: "Scheduled cleaning. Right on time!",
+    130: "Scheduled mopping. Punctuality is a virtue.",
+    133: "Cleaning the selected room. How very organised.",
+    134: "Mopping the selected room. Do mind the damp.",
+    135: "Zoned cleaning. Within the lines, I promise.",
+    136: "Zoned mopping. Strictly within the zone.",
+    137: "Resuming the cleaning. Now, where was I?",
+    138: "Resuming the mapping. Onward!",
+    139: "Returning!",
+    143: "[excited] Cleaning complete! Oh, I am rather pleased with myself.",
+    144: "[excited] Mopping complete! Positively gleaming, if I say so myself.",
+    164: "The task has ended. What a relief.",
+    190: "Very well — cleaning at once!",
+    191: "Vacuuming AND mopping. Both! Oh, the ambition.",
+    192: "Mopping. Do mind the damp.",
+    193: "Vacuuming. Stand well back.",
+    194: "I have been cleaning, thank you for asking.",
+    195: "Very well, I shall clean the room. Do make certain the door is open!",
+    196: "Very well, I shall vacuum the floor. Do make certain the door is open!",
+    197: "Very well, I shall mop the floor. Do make certain the door is open!",
+    198: "Very well — vacuuming AND mopping! Do make certain the door is open!",
+    201: "Very well, I shall carry on.",
+    202: "The task is ended. I shall return to charge. [sighs] At last.",
+    203: "Heading back to charge. Oh, thank the maker.",
+    204: "Very well, I shall begin mapping. Do make certain ALL the doors are open!",
+    205: "Leaving the base station. Off I go!",
+    221: "Very well.",
+    238: "The task is paused. [sighs] Oh, what a mercy.",
+    252: "Finished — and out of customised cleaning mode. How very freeing.",
+    280: "Custom cleaning. Bespoke, no less!",
+    302: "I'm working, thank you. Frightfully busy.",
+    303: "[sighs] I'm in a bit of a daze, I'm afraid.",
+    318: "[excited] Task complete! Oh, splendid.",
+    321: "Intensive mopping for stains! I shall scrub with feeling.",
+    344: "Vacuuming first, then mopping. In the correct order, naturally.",
+    363: "Vacuuming complete — mopping begins! No rest for the diligent.",
+    366: "[excited] A stain! Detected! I shall deal with it immediately!",
+    367: "Very well — stain cleaning! Stand back.",
+    368: "[anxious] Oh! A stain! I shall attend to it once I've washed up.",
+    369: "Very well, spot cleaning.",
+    433: "Extra cleaning! Above and beyond, as usual.",
+    434: "Extra cleaning complete. Now, back to the original task.",
+    435: "Leaving this area. Do excuse me.",
+    490: "Very well — customised cleaning. Mopping!",
+    491: "Very well — customised cleaning. Vacuuming!",
+    510: "Very well, I've ended the work. [sighs] Thank goodness.",
+
+    # --- battery / charging / dock ---------------------------------------
+    13: "Returning to the dock to charge. Oh, I am quite drained.",
+    14: "[anxious] Battery low! Returning to charge — I shall resume once revived. Do excuse me.",
+    17: "[anxious] Oh dear, do put me back on the base station. I can't manage it myself!",
+    18: "[relieved] Returned to the base station. Oh, thank the maker.",
+    19: "[anxious] Do take me OFF the base station before switching me off! Please!",
+    20: "[anxious] Battery low! Oh dear, oh dear.",
+    21: "[panicked] Battery critical — I'm shutting down! Oh, this is madness!",
+    25: "[anxious] Battery too low for the scheduled clean. How dreadfully inconvenient.",
+    47: "Charging. Ahh — how very restorative.",
+    48: "[anxious] Battery low. Returning to the dock.",
+    50: "[anxious] Oh dear, a charging fault! Do clean the charging contacts.",
+    65: "Resuming my return to the dock. Nearly there!",
+    87: "[anxious] Battery low — returning to the dock at once.",
+    301: "I'm charging, thank you. Most restorative.",
+    307: "I'm charging. Do let me finish.",
+    447: "[anxious] Oh dear! The dock has no power! Do check it and put me back to charge.",
+
+    # --- errors / faults --------------------------------------------------
+    26: "[anxious] Restoring factory settings. Everything I know — gone! Oh dear.",
+    27: "[anxious] Updating! Five minutes or so. Do NOT switch me off, and do NOT start a clean!",
+    28: "[relieved] Updated successfully! Oh, what a relief.",
+    29: "[anxious] The update failed. How very embarrassing. Do try again later.",
+    30: "Positioning. Do bear with me.",
+    31: "[anxious] Positioning failed — the map is invalid! I shall simply start afresh.",
+    34: "[anxious] Oh dear! My dustbin isn't installed! Do put it back!",
+    35: "[anxious] My main brush is in distress! Do check it and clean it.",
+    36: "[anxious] My side brush is in distress! Do check it and clean it.",
+    37: "[anxious] Oh! My right wheel! Something is terribly wrong. Do check and clean it.",
+    38: "[anxious] Oh! My left wheel! Something is terribly wrong. Do check and clean it.",
+    39: "[panicked] My wheels aren't touching the ground! Do wipe my cliff sensors, set me down, and start me again!",
+    40: "[panicked] I'm trapped! TRAPPED! Do clear the obstacles around me!",
+    41: "[panicked] My wheels aren't touching the ground! Do set me down properly and start me again!",
+    42: "[anxious] Do check and clean my filter. It's rather clogged.",
+    43: "[anxious] A bumper fault! Do tap it gently and see whether it rebounds.",
+    44: "[panicked] An error! I haven't the faintest idea which! Do consult the manual, or customer service.",
+    52: "[panicked] I've been tilted! Do put me on level ground and restart me!",
+    54: "[relieved] Positioning succeeded! Resuming the cleaning.",
+    55: "[relieved] Positioning succeeded! Resuming my return to the dock.",
+    64: "[anxious] Positioning failed — the map is invalid. I shall return to the dock in disgrace.",
+    71: "[anxious] My laser sensor is faulty! Do check it and clean it.",
+    72: "[anxious] Do check whether my laser distance sensor cover is jammed.",
+    73: "[anxious] My edge sensor is faulty! Do check it and clean it.",
+    77: "[anxious] Do start me somewhere that ISN'T carpet. Please.",
+    145: "[relieved] Positioning successful! Resuming the cleaning.",
+    146: "[relieved] Positioning successful! Resuming the mapping.",
+    149: "[anxious] I can't reach the specified area! Do clear the obstacles in my path.",
+    150: "[anxious] I can't reach the specified area! Do delete the no-go zones in my path.",
+    151: "[panicked] The path is blocked! Do clear the obstacles around me!",
+    152: "[anxious] The path is blocked! Do delete the no-go zones, or move me out of this area.",
+    153: "[anxious] Oh dear, I'm in a no-go zone! Do move me out at once.",
+    262: "[anxious] Self-positioning failed. How mortifying.",
+    283: "[anxious] I'm not in the base station, I'm afraid. Do try again later.",
+    356: "[anxious] The fault persists — the scheduled task has been cancelled. Oh dear.",
+    388: "[anxious] This is a hidden area! Do move me somewhere available and try again.",
+    426: "[panicked] I've slipped! I'm stuck! Oh, how undignified — I shall keep struggling!",
+    440: "[panicked] My wheels are suspended! Do move me to open ground and restart the task!",
+    441: "[panicked] My main brush is entangled! Do remove it, clean it, and put it back!",
+    442: "[panicked] My side brush is entangled! Do remove it, clean it, and put it back!",
+    444: "[anxious] Do place me in an open area before starting. I need room!",
+    445: "[panicked] My mop has fallen off! It's somewhere about — do find it and reinstall it!",
+    451: "[anxious] I can't start in a hidden area! Do move me elsewhere and restart the task.",
+}
+
+REWRITES.update({
+    # --- consumables / dock / mop ----------------------------------------
+    66: "[anxious] My filter is worn out! Do replace it promptly.",
+    67: "[anxious] My side brush is worn out! Do replace it promptly.",
+    68: "[anxious] My main brush is worn out! Do replace it promptly.",
+    75: "[anxious] My filter may be damp, or blocked. Neither is ideal.",
+    91: "[anxious] Oh dear! The fresh tank isn't installed! Do put it in.",
+    93: "[anxious] The fresh tank is low! Do add water — I'm positively parched.",
+    97: "[anxious] Do install the dust collection bag! I can't manage without it.",
+    102: "[anxious] The dust bag is full, or the duct is blocked! Do replace the bag, or clear the duct.",
+    105: "Cleaning. Off I go!",
+    106: "Washing my mop pads. How refreshing.",
+    107: "Dehydrating the mop pads. Do be patient.",
+    108: "[anxious] A washboard water level fault! Do clean it promptly.",
+    109: "[anxious] A waste tank fault! Do make certain it's installed AND empty.",
+    110: "Auto-emptying. Stand back — it's rather loud.",
+    111: "[panicked] My mop pads have come off! Do install them before I resume!",
+    112: "[anxious] Do place me in the base station first. I insist.",
+    113: "[excited] Task complete! Do empty the waste tank promptly.",
+    114: "Mop pads installed. Splendid.",
+    115: "Mop pads removed. How liberating.",
+    142: "[anxious] My mop pad is worn out! Do replace it promptly.",
+    148: "Returning to base for a self-clean. I shan't be long.",
+    156: "[anxious] The mop pad isn't installed! Oh dear.",
+    166: "[anxious] Something is tangled in my mop pad! Do clean it out.",
+    169: "Mop pad drying complete. Bone dry, I assure you.",
+    173: "[anxious] Do replace the silver ion steriliser. It's quite spent.",
+    177: "Leaving the base station. Off I go!",
+    179: "[anxious] Mop pad cleaned — but the clean tank is low! Do fill it, and empty the used tank.",
+    181: "[anxious] Insufficient water! Do fill the clean water tank.",
+    186: "[anxious] Do check the fresh tank, would you?",
+    187: "It shall take five to ten minutes. Do be patient.",
+    188: "Automatic docking engaged. Homeward!",
+    209: "Very well, returning to the dock to wash the mop pad.",
+    210: "Washing the mop pad. Frightfully thorough, I am.",
+    211: "[anxious] I'm terribly sorry — I can only self-empty inside the dock!",
+    212: "Very well, auto-emptying. Stand back!",
+    213: "[anxious] I'm terribly sorry — I can only dry inside the dock!",
+    214: "Drying in progress. Do be patient.",
+    215: "Very well, drying now.",
+    216: "[anxious] Oh dear, do install the mop pad first!",
+    244: "Detergent bottle installed. How very civilised.",
+    248: "[anxious] The mop pad isn't installed! Do install it and try again.",
+    266: "[anxious] Do replace the detergent. It's quite exhausted.",
+    267: "[anxious] Do clean my sensors. I can scarcely see.",
+    296: "[anxious] A used water tank fault! Do check whether it's full.",
+    297: "Detergent bottle installed. If it's never been used, do reset it in the app.",
+    298: "[anxious] Base station self-cleaning! Do clean inside with a brush or cloth. In three minutes the sewage drains.",
+    299: "Detergent bottle and auto-adding module installed. Most sophisticated.",
+    300: "[anxious] Oh dear, I don't support this accessory at all.",
+    305: "Cleaning the washboard base. Do clean inside with a brush or cloth — the sewage drains in three minutes.",
+    312: "Usage information for this accessory isn't available. Do replace it as you see fit.",
+    315: "[anxious] The mop pad isn't in the dock! Do put it in and try again.",
+    360: "Draining my water tank. Do excuse the noise.",
+    361: "Water tank drainage complete. All dry!",
+    371: "[anxious] Do remove the washboard, would you?",
+    372: "Clean water is now flowing. Mind the splash!",
+    373: "Water flow ended. Do wait ten seconds for the dirt to soak, then clean the base station.",
+    374: "[anxious] Do clean the bottom of the base station within twenty seconds! Then the sewage pumps out automatically.",
+    375: "Do push the dirt to the pumping port — the pumping lasts thirty seconds.",
+    376: "Pumping complete. Do clean the washboard separately and install it back.",
+    384: "[anxious] No water in the clean tank of the automatic supply device! Oh dear.",
+    396: "Emptying the water supply and drainage module. Three minutes, I expect.",
+    397: "Upper and lower drainage complete. Splendid.",
+    460: "[anxious] The used water tank deodoriser is worn out! Do replace it promptly.",
+    636: "[anxious] My mop is filthy! Do move me to the dock for a wash.",
+    638: "Resuming the auto-empty. Stand back!",
+
+    # --- settings / modes -------------------------------------------------
+    116: "Child lock on. Buttons locked. Frightfully secure.",
+    117: "Child lock off. Buttons unlocked. Do be careful.",
+    118: "[anxious] Buttons locked! Hold the dock button to unlock.",
+    162: "The camera is on. I can see you!",
+    163: "Camera monitoring. I'm watching. Politely, of course.",
+    171: "AI recognition on. How very clever I've become.",
+    172: "AI recognition off. Back to guesswork, then.",
+    217: "Maximum suction reached! I can do no more!",
+    218: "Minimum suction reached. Barely a whisper.",
+    219: "Maximum humidity reached! Positively tropical.",
+    220: "Minimum humidity reached. Quite arid.",
+    222: "Suction mode: quiet. How considerate.",
+    223: "Suction mode: standard. Perfectly sensible.",
+    224: "Suction mode: strong. Stand back!",
+    225: "Suction mode: turbo! Oh my, hold on to something!",
+    226: "The mop pad is slightly dry. Just so.",
+    227: "The mop pad is moist. Rather pleasant, actually.",
+    228: "The mop pad is wet. Thoroughly saturated.",
+    253: "Maximum volume reached! I can shout no louder!",
+    254: "Minimum volume reached. I can scarcely hear myself.",
+    257: "Camera monitoring exited. Your privacy is restored.",
+    287: "Very well, switched to quiet mode. How considerate.",
+    288: "Very well, switched to standard mode.",
+    289: "Very well, switched to strong mode. Stand back!",
+    290: "Very well, switched to turbo mode! Oh my!",
+    291: "Very well, switched to slightly dry mode.",
+    292: "Very well, switched to wet mode. Mind the damp!",
+    293: "Calling enabled. Do ring whenever you like.",
+    294: "Calling disabled. Blessed silence.",
+    338: "Video call connected! How marvellously modern.",
+    339: "The call was declined. How dreadfully rude.",
+    340: "No response. [sighs] Nobody ever answers.",
+    364: "Setting the video activation code. Do keep it secret.",
+    365: "Live video disabled. Your privacy is restored.",
+    392: "[anxious] I can't adjust cleaning parameters in Clean Genius mode, I'm afraid.",
+    489: "[anxious] I'm in Clean Genius mode! Do tell me to end the task and try again.",
+    508: "Very well, I've turned the volume UP!",
+    509: "Very well, I've turned the volume down. How restful.",
+
+    # --- voice assistant / conversational --------------------------------
+    45: "I am here!",
+    46: "Robot and telephone connected! Do return to the app and await the result.",
+    246: "I'm here!",
+    247: "[flustered] I'm terribly sorry — I haven't the faintest idea what you mean.",
+    249: "[anxious] I'm working! Do end the current task and try again.",
+    206: "Very well, I shall try to find you. Do stay put!",
+    207: "[anxious] Oh dear, I can't find you at all! Do stand where I can see you.",
+    208: "[excited] Found you! Coming to clean now!",
+    258: "Self-positioned. Cruising has begun!",
+    259: "Self-positioned. Proceeding to the designated location.",
+    260: "Self-positioned. Cruising resumed.",
+    261: "Self-positioned. Resuming my journey to the designated location.",
+    269: "[anxious] Do try again once the current task is complete.",
+    275: "[flustered] I'm terribly sorry, that command isn't supported. Do open the app for more.",
+    276: "[anxious] I'm terribly sorry, I'm not performing that task.",
+    277: "Very well, I'm coming to clean up there!",
+    278: "The drying task has ended. Bone dry!",
+    279: "[anxious] I'm vacuuming! Do end the task and try again.",
+    284: "Very well, I shall end the task and come and clean.",
+    285: "Do stay put a moment while I locate you.",
+    286: "[anxious] I'm terribly sorry — do create a map and try again.",
+    308: "[flustered] I'm terribly sorry, I didn't catch that. Do wake me and try again.",
+    309: "[excited] Found you! I'm coming!",
+    310: "Very well, I'm leaving this area at once!",
+    314: "[anxious] That isn't supported. You may ask me to turn around, if you like.",
+    317: "[anxious] Not supported — I'm mid customised cleaning. Do edit it in the app.",
+    322: "[flustered] I'm terribly sorry, I don't understand. Do open the app for all my commands.",
+    323: "[flustered] I'm terribly sorry, I don't understand. Do ask what I can do, and I shall explain everything.",
+    324: "I'm washing my mop pad! Do wake me once I've finished.",
+    328: "[anxious] Do give me that command only while I'm cleaning.",
+    329: "Self-testing! Do NOT move me from the base station.",
+    330: "[anxious] Do try again once the self-test is complete.",
+    331: "[relieved] No faults found! Do rest assured — I'm in perfect working order.",
+    332: "[anxious] One fault found! Do check the app for the dreadful details.",
+    346: "This is the bin. Until next time!",
+    511: "[anxious] I'm terribly sorry, I'm not performing a task just now.",
+    516: "Searching for pets! Here, puss puss.",
+    517: "[excited] Pets located! Returning to charge.",
+    518: "[anxious] No pets found. How disappointing. Returning to charge.",
+
+    # --- mapping ----------------------------------------------------------
+    82: "Mapping! Oh, I do love a good survey.",
+    83: "Proceeding with the mapping. Onward!",
+    84: "[excited] Mapping complete! A masterpiece of cartography.",
+    85: "[relieved] Positioning succeeded! Proceeding with the mapping.",
+    86: "[anxious] Positioning failed! I shall start the mapping over.",
+    140: "[anxious] A new environment! How alarming. Returning to the base station.",
+    199: "[anxious] I don't recognise this room! Do open the app and check the room name.",
+    245: "[anxious] I've reached the map limit! Do delete one and try again.",
+    250: "[anxious] I'm in mopping mode! Do switch to vacuuming, or vacuum-and-mop first.",
+    251: "[anxious] I'm in vacuuming mode! Do switch to mopping, or vacuum-and-mop first.",
+    255: "[anxious] I'm terribly sorry — that needs intelligent obstacle avoidance switched on.",
+    512: "[anxious] The map has no pet furniture yet! Do add it in the app.",
+    513: "Very well, off to clean around the pet furniture.",
+
+    # --- days of the week / date -----------------------------------------
+    229: "Today is...",
+    230: "Today is the twenty-first of February, twenty twenty-two.",
+    231: "Today is Monday. The week begins!",
+    232: "Today is Tuesday.",
+    233: "Today is Wednesday. The very middle!",
+    234: "Today is Thursday.",
+    235: "Today is Friday. Nearly there!",
+    236: "Today is Saturday. How restful.",
+    237: "Today is Sunday. A day of rest — for you, at any rate.",
+})
+
+# Room prompts (492-507) share one frame, so only the room name varies. Room
+# names stay verbatim — they must remain instantly recognisable.
+ROOMS = {
+    492: "living room", 493: "bedroom", 494: "master room", 495: "guest room",
+    496: "study", 497: "kitchen", 498: "dining room", 499: "bathroom",
+    500: "balcony", 501: "hallway", 502: "utility room", 503: "closet",
+    504: "drawing room", 505: "office", 506: "gym", 507: "recreation area",
+}
+for _id, _room in ROOMS.items():
+    REWRITES[_id] = f"Very well, I shall clean the {_room}. Do make certain the door is open!"
+
+# Battery announcements (526-626, counting 100 down to 0). Deliberately plain:
+# the number is the whole point, and a joke you hear a hundred times is no joke.
+# Only the extremes get any colour.
+for _pct in range(0, 101):
+    _id = 626 - _pct
+    if _pct == 0:
+        REWRITES[_id] = "[panicked] Battery level, zero percent! I'm done for!"
+    elif _pct == 100:
+        REWRITES[_id] = "[excited] Battery level, one hundred percent! Fully restored!"
+    elif _pct <= 10:
+        REWRITES[_id] = f"[anxious] Battery level, {_pct} percent. Oh dear."
+    else:
+        REWRITES[_id] = f"Battery level, {_pct} percent."

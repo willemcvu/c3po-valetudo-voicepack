@@ -1,20 +1,24 @@
 #!/usr/bin/env bash
-# Package encoded prompts into the tar.gz the Dreame firmware expects.
+# Package a pack's encoded prompts into the tar.gz the Dreame firmware expects.
 #
-#   ./package.sh [ogg-dir] [output-name]
+#   ./package.sh <pack>
 #
+# Reads packs/<pack>/build/ogg, writes packs/<pack>/dist/<pack>.tar.gz + HASH.txt.
 # The .ogg files must sit at the ARCHIVE ROOT — no enclosing directory, or the
 # firmware extracts them somewhere it never looks.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-OGG_DIR="${1:-$ROOT/build/ogg}"
-NAME="${2:-c3po}"
-DIST="$ROOT/dist"
+NAME="${1:?usage: package.sh <pack>}"
+PDIR="$ROOT/packs/$NAME"
+OGG_DIR="$PDIR/build/ogg"
+DIST="$PDIR/dist"
 
-count=$(find "$OGG_DIR" -maxdepth 1 -name '*.ogg' | wc -l)
+[ -f "$PDIR/pack.py" ] || { echo "no pack '$NAME' at $PDIR" >&2; exit 1; }
+
+count=$(find "$OGG_DIR" -maxdepth 1 -name '*.ogg' 2>/dev/null | wc -l)
 if [ "$count" -eq 0 ]; then
-  echo "no .ogg files in $OGG_DIR — run encode.sh first" >&2
+  echo "no .ogg files in $OGG_DIR — run encode.sh $NAME first" >&2
   exit 1
 fi
 
