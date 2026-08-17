@@ -1,0 +1,45 @@
+name: Deploy catalog to Pages
+
+# Regenerates docs/ from the packs and publishes it on every push to main.
+# The static site is built in CI, so docs/ never needs to be committed.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a newer run supersede an in-flight one, but don't cancel a live deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # build_site.py uses only the standard library, so no dependencies to install.
+      # Pass the repo slug + branch so the generated install URLs point at this fork.
+      - name: Build catalog
+        run: python3 scripts/build_site.py "${{ github.repository }}" "${{ github.ref_name }}"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
