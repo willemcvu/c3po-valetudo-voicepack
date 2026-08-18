@@ -22,7 +22,7 @@ META = {
     "name": "bertram",
     "title": "Bertram",
     "language_code": "BERTRAM",
-    "voice_tag": "CLONE",
+    "voice_tag": "VOICE",
     "profile": "p0",           # natural voice, no processing
     "description": "Bertram from Jessie: lazy, deadpan, sardonic butler doing this under protest.",
 }

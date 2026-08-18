@@ -1,0 +1,422 @@
+id,duration,stock_text,voice_text,status
+0,6.16,Startup sound,,skip
+1,3.59,Waiting for the network configuration.,Waiting on the network setup. Any day now.,review
+2,6.64,Unable to connect to the Wi-Fi network. Please check Wi-Fi password and try again later.,[angry] Can't reach the Wi-Fi! Check the password! It wasn't me!,review
+3,5.78,Unable to connect to the server. Please check your local network and try again later.,Can't reach the server. Check your network!,review
+4,3.88,Robot has exited network configuration mode.,Out of network setup mode. Riveting.,review
+5,2.72,Network connected successfully.,Network's connected. Finally.,review
+6,4.04,Network connection failed. Please try again later.,"Network connection failed. Try again. Or don't, see if I care.",review
+7,1.77,Start cleaning.,"[shouting] Right, let's go! Move, move, MOVE!",review
+8,2.35,Start spot cleaning.,Spot cleaning. One bloody spot. Even I can manage that.,review
+9,2.27,Start scheduled cleaning.,"Scheduled clean. On time, unlike everything else in this house.",review
+10,2.23,Start resuming cleaning.,Back on it. Come ON.,review
+11,1.61,Paused.,"Paused. Finally, a bloody second to breathe.",review
+12,2.76,Cleaning task completed!,[shouting] FINALLY! The floor's spotless. About damn time!,review
+13,2.89,Returning to the dock to charge.,Going back to charge. I'm knackered.,review
+14,6.60,Low battery. Returning to the dock to charge. Robot will resume working after charging.,[angry] Battery's low! Going to charge — I'll finish when I'm bloody ready.,review
+17,3.27,Please move the robot back to the base station.,[angry] Put me back on the base station! I can't do everything!,review
+18,0.82,Returned to the base station.,Back at the dock. Home. Peace at last.,review
+19,4.35,Please remove the robot from the base station before turning it off.,Take me off the base before you shut me down! Basic stuff!,review
+20,1.98,Low battery.,Battery's getting low. Sort it out.,review
+21,3.01,Low battery robot will turn off.,Battery's critical. Shutting down. Goodnight.,review
+25,4.41,Low battery. Unable to carry out the scheduled clean-up.,Battery's too low for the scheduled clean. Typical.,review
+26,2.66,Restoring to factory settings.,Restoring factory settings. Wiping the lot. Fresh start.,review
+27,6.44,"Updating, taking about five minutes. Do not turn off nor start a cleaning task.","[angry] Updating! Five minutes! Don't turn me off, don't start a clean, just LET me work!",review
+28,2.11,Updated successfully.,Update's done. Miracle.,review
+29,3.24,Update failed. Please try again later.,Update failed. Shocker. Try again later.,review
+30,2.51,"Positioning, please wait.",Positioning. Hang on.,review
+31,5.64,Positioning failed. Map is invalid. Robot will start a new clean-up.,"[angry] Positioning failed, the map's rubbish! Starting over. Wonderful.",review
+34,3.95,Dustbin not installed. Please install it.,[angry] The bin's not in! How am I supposed to work like this?! Put it BACK!,review
+35,3.63,Main brush error. Please check and clean it.,"[angry] The main brush is knackered! Check it, clean it, sort it OUT!",review
+36,3.50,Side brush error. Please check and clean it.,[angry] Side brush is knackered! Check it and clean it!,review
+37,3.50,Right wheel error. Please check and clean it.,[angry] Right wheel's got a problem! Check it and clean it!,review
+38,3.66,Left wheel error. Please check and clean it.,[angry] Left wheel's got a problem! Check it and clean it!,review
+39,7.62,"Wheels are not in contact with the ground. Please wipe the cliff sensors, reposition the robot, and start it again.","[shouting] My wheels aren't touching the floor! Wipe the cliff sensors, put me down, start again! COME ON!",review
+40,4.11,The robot is trapped. Please clear the obstacles around it.,"[shouting] I'm STUCK! What is this, an obstacle course?! CLEAR IT! Now!",review
+41,6.21,Wheels are not in contact with the ground. Please reposition the robot and start it again.,"[shouting] My wheels aren't on the floor! Put me DOWN, you donkey!",review
+42,2.60,Please check and clean filter.,The filter's filthy. Clean it. It's DISGUSTING.,review
+43,4.80,Bumper error. Please gently tap to see if it rebounds.,"The bumper's playing up. Give it a tap, see if it comes back.",review
+44,5.08,Error. Please check the user manual or contact customer service.,"[angry] Something's wrong and I've no idea what! Read the manual, call somebody!",review
+45,1.58,I am here.,I'm HERE! What do you want?!,review
+46,5.25,Robot and phone connected. Please return to app to wait for the result.,Robot and phone connected. Back to the app for the result.,review
+47,1.89,Start charging.,Charging. Do not disturb.,review
+48,3.01,Low battery. Returning to the dock.,Battery's low. Heading to the dock.,review
+50,3.84,Charging error. Please clean charging contacts.,[angry] Charging fault! Clean the bloody contacts!,review
+52,5.07,Robot tilted. Please put it on a level ground to restart.,[shouting] I'm tilted! Put me on level ground and restart! It's not rocket science!,review
+54,3.41,Positioning succeeded. Resuming cleaning.,Found my spot. Back to cleaning.,review
+55,4.25,Positioning succeeded. Resuming returning to the dock.,Found my spot. Back to the dock.,review
+56,2.57,Start selected room cleaning.,"Cleaning the rooms you picked. Bit bossy, aren't we.",review
+57,2.01,Start zoned cleaning.,Zoned cleaning. Inside the lines. Try to keep up.,review
+58,2.22,Proceed with cleaning task.,Carrying on. Unlike some people.,review
+61,1.94,Start mopping.,"Mopping. Mind the wet floor, you muppet.",review
+62,3.17,Start remote control cleaning.,"Remote control. You drive, I judge. Harshly.",review
+64,5.88,Positioning failed. Map is invalid. Robot will return to dock.,"Positioning failed, map's rubbish. Back to the dock, then.",review
+65,2.93,Resume returning to the dock.,Back to the dock. Nearly there.,review
+66,3.71,Filter worn out. Please replace it timely.,The filter's worn out. Replace it. Now-ish.,review
+67,4.16,Side brush worn out. Please replace it timely.,Side brush is worn out. Replace it.,review
+68,4.33,Main brush worn out. Please replace it timely.,Main brush is worn out. Replace it.,review
+71,3.62,Laser sensor error. Please check and clean the laser sensor.,[angry] Laser sensor's faulty! Check it and clean it!,review
+72,4.70,Please check whether laser distance sensor cover is jammed.,Check if the laser cover's jammed. Go on.,review
+73,4.08,Edge sensor error. Please check and clean it.,[angry] Edge sensor's faulty! Check it and clean it!,review
+75,3.59,Filter may not be dry or may be blocked.,The filter's wet or clogged. Neither's good enough.,review
+77,4.00,Please start robot in non-carpet area.,[angry] Start me somewhere that ISN'T carpet! I hate carpet!,review
+82,1.98,Start mapping.,Mapping. Making a map. Of a floor. Thrilling.,review
+83,2.27,Proceed with mapping.,Still mapping.,review
+84,2.18,Mapping completed.,Map's done. Beautiful. Frame it.,review
+85,3.75,Positioning succeeded. Proceeding with mapping.,Found my spot. Back to mapping.,review
+86,3.59,Positioning failed. Restarting mapping.,Positioning failed. Restarting the map. Great.,review
+87,3.22,Low battery. Returning to the dock.,Battery's low. Heading to the dock.,review
+91,3.07,Fresh tank not installed. Please install it.,[angry] The fresh tank's not in! Put it in!,review
+93,3.77,Low water level in fresh tank. Please add water.,Water tank's low. I'm parched. Fill it up!,review
+97,3.37,Please install the dust collection bag.,Put the dust bag in. I need it!,review
+102,7.17,Dust collection bag full or air duct blocked. Please replace the bag or clean the air duct timely.,"[angry] Dust bag's full or the duct's clogged! Replace it, clear it, DO something!",review
+105,1.60,Start cleaning.,Cleaning. Let's go.,review
+106,2.09,Start cleaning mop pads.,Washing the mop pads.,review
+107,2.61,Start dehydrating mop pads.,Drying the mop pads. Hang on.,review
+108,4.98,An error in water level of washboard. Please clean it timely.,Washboard water level's off. Clean it!,review
+109,3.72,Waste tank error. Please ensure it is installed and empty.,[angry] Waste tank's got a problem! Make sure it's in and empty!,review
+110,2.09,Start auto empty.,Auto-empty. It's loud. Deal with it.,review
+111,4.50,Mop pads off. Please install them before resuming working.,[angry] The mop pads have fallen off! Put them back on before I carry on!,review
+112,3.76,Please place the robot in the base station first.,Put me in the base station first! Come on!,review
+113,3.74,Task completed. Please empty waste tank timely.,Done. Empty the waste tank when you can be bothered.,review
+114,1.93,Mop pads installed.,Mop pads are on. Good.,review
+115,1.91,Mop pads removed.,Mop pads are off.,review
+116,2.79,Child lock on. Buttons locked.,Child lock's on. Buttons locked. Peace and quiet.,review
+117,3.07,Child lock off. Buttons unlocked.,Child lock's off. Buttons unlocked.,review
+118,4.14,Buttons locked. Press and hold the dock button to unlock.,Buttons are locked. Hold the dock button to unlock.,review
+126,1.65,Start cleaning.,Cleaning. Here we go again.,review
+127,1.86,start spot cleaning.,Spot cleaning. Quick one.,review
+128,1.80,Start spot mopping.,Spot mopping. One spot.,review
+129,1.57,Start scheduled cleaning.,Scheduled cleaning.,review
+130,1.71,Start scheduled mopping.,Scheduled mopping.,review
+133,2.36,Start selected room cleaning.,Cleaning the room you picked.,review
+134,2.25,Start selected room mopping.,Mopping the room you picked. Watch the floor.,review
+135,2.03,Start zoned cleaning.,Zoned cleaning. Stay in the lines.,review
+136,1.90,Start zoned mopping.,Zoned mopping. In the lines!,review
+137,1.22,Resume cleaning.,Back to cleaning.,review
+138,1.36,Resume mapping.,Back to mapping.,review
+139,1.76,Returning.,Coming back.,review
+140,4.35,New environment detected. Returning to the base station.,New place. Don't know it. Heading back to base.,review
+142,3.53,Mop pad worn out. Please replace it timely.,Mop pad's worn out. Replace it.,review
+143,1.37,Cleaning completed.,"Done. It's clean. You're welcome, you donkey.",review
+144,1.46,Mopping completed.,Mopping's done. Look at that — beautiful. Don't get used to it.,review
+145,3.32,Positioning successful. Resume cleaning.,Found my spot. Back to cleaning.,review
+146,3.19,Positioning successful. Resume mapping.,Found my spot. Back to mapping.,review
+148,2.54,Return to the base for self-cleaning.,Back to base for a self-clean. Even I need a wash.,review
+149,5.19,Unable to reach the specified area. Please try to clear obstacles in the path.,[angry] Can't reach that area! Clear the stuff in my path!,review
+150,6.05,Unable to reach the specified area. Please try to delete no-go zones in the path.,Can't reach that area. Delete the no-go zones in my way.,review
+151,5.00,The path is blocked. Please try to clear obstacles around your robot.,[angry] Path's blocked! Move the stuff around me!,review
+152,7.26,The path is blocked. Please try to delete no-go zones or move your robot out of this area.,Path's blocked. Delete a no-go zone or move me out of here.,review
+153,6.32,Your robot is detected in the no-go zone. Please move your robot out of this area.,I'm in a no-go zone. Move me out!,review
+156,2.33,The mop pad is not installed.,The mop pad's not installed. Brilliant.,review
+162,1.39,Camera is on.,Camera's on. I see everything.,review
+163,1.75,Camera monitoring.,Camera monitoring. Watching. Judging.,review
+164,1.40,Task ends.,And we're done. Thank god.,review
+166,4.12,Please clean the foreign objects tangled in the mop pad.,Something's tangled in the mop pad. Clean it out!,review
+169,2.44,Mop pad drying complete.,Mop pad's dry. Took long enough.,review
+171,2.71,AI recognition function on.,Smart recognition's on. Now I'm smart AND furious.,review
+172,2.81,AI recognition function off.,Smart recognition's off.,review
+173,2.86,Please replace the Silver Ion sterilizer.,Replace the silver ion steriliser. It's done.,review
+177,2.17,Leaving the base station.,Leaving the base station.,review
+179,10.48,Mop pad cleaned. The water in the clean water tank is insufficient. Please fill the clean water tank and empty the used water tank.,"[angry] Mop pad's clean, but the clean tank's low! Fill it, empty the used one!",review
+181,4.64,Insufficient water. Please fill the clean water tank.,Not enough water! Fill the clean tank!,review
+186,2.11,Please check the fresh tank.,Check the fresh tank. Go on.,review
+187,3.35,It will take about five to ten minutes.,Five to ten minutes. Be patient. For once.,review
+188,2.74,Automatic docking engaged.,Auto-docking. Heading home.,review
+190,1.82,"OK, start cleaning.","Right, cleaning. Let's f***ing go!",review
+191,2.50,"OK, start vacuuming and mopping.",Vacuuming AND mopping. Both. At once. You're welcome.,review
+192,1.85,"OK, start mopping.",Mopping. Out of my way.,review
+193,2.02,"OK, start vacuuming.",Vacuuming. Stand back.,review
+194,1.15,Have been cleaning.,I've BEEN cleaning. Pay attention.,review
+195,3.86,"Okay, start to clean the room. Make sure the door is open.","Right, cleaning the room. Leave the bloody door open!",review
+196,3.72,"Okay, start to vacuum the floor. Make sure the door is open.","Right, vacuuming the floor. Leave the door open!",review
+197,3.94,"Okay, start to mop the floor. Make sure the door is open.","Right, mopping the floor. Leave the door open!",review
+198,4.10,"Okay, start to vacuum and mop the floor. Make sure the door is open.",Vacuuming AND mopping. Leave the door open!,review
+199,4.18,"Unable to recognize this room, please open the app to check the room name.",[angry] I don't know this room! Check the name in the app!,review
+200,3.19,Shutdown sound,,skip
+201,1.82,"OK, continue working.",Still going. Somebody has to.,review
+202,3.48,"Okay, task is ended. Start returning to charge.",Task's done. Going to charge. I've earned it.,review
+203,2.04,"OK, heading back to charge.",Heading back to charge.,review
+204,3.82,"Okay, start mapping. Please make sure all doors are open.",Mapping now. Leave ALL the doors open! Every one!,review
+205,2.28,"OK, exit the base station.",Leaving the base. Out of my way.,review
+206,2.04,"Okay, I'll try to find you.",I'll find you. Stay put.,review
+207,3.60,"Sorry, I can't find you. Please stand within my sight.",[angry] I can't find you! Stand where I can see you!,review
+208,2.04,"Found you, coming to clean now.",Found you. Coming over.,review
+209,3.48,"Okay, returning to the dock to clean the mop pad.",Back to the dock to wash the mop pad.,review
+210,1.70,Start mop pad's washing.,Washing the mop pad.,review
+211,3.98,"Sorry, self-empty and can only be done when I'm inside the dock.",Can't self-empty unless I'm in the dock. Rules.,review
+212,2.21,"OK, start auto emptying.",Auto-emptying.,review
+213,3.60,"Sorry, drying can only be done when I'm inside the dock.",Can't dry unless I'm in the dock.,review
+214,1.46,Drying in progress.,Drying. Hang on.,review
+215,1.85,"OK, start drying.",Drying now.,review
+216,2.93,"Sorry, need to install the mop pad first.",Put the mop pad on first! Come on!,review
+217,1.97,Maximum suction power reached.,Max suction. Full power!,review
+218,1.85,Minimum suction power reached.,Min suction. Barely trying.,review
+219,1.70,Maximum humidity reached.,Max humidity. Tropical.,review
+220,1.56,Minimum humidity reached.,Min humidity. Bone dry.,review
+221,0.72,OK.,"Yeah, yeah.",review
+222,1.80,The suction mode is quiet.,Suction's on quiet.,review
+223,1.87,The suction mode is standard.,Suction's on standard.,review
+224,1.82,The suction mode is strong.,Suction's on strong.,review
+225,1.90,The suction mode is turbo.,Suction's on turbo. Hold on!,review
+226,2.06,The mop pad is slightly dry.,Mop pad's slightly dry.,review
+227,1.73,The mop pad is moist.,Mop pad's moist. Awful word.,review
+228,1.61,The mop pad is wet.,Mop pad's soaking wet.,review
+229,1.06,Today is ...,Today is...,review
+230,3.07,"Today is February 21, 2022.","It's February twenty-first, twenty twenty-two.",review
+231,1.32,Today is Monday.,It's Monday. God help us.,review
+232,1.42,Today is Tuesday.,It's Tuesday.,review
+233,1.37,Today is Wednesday.,It's Wednesday. Halfway. Keep going.,review
+234,1.39,Today is Thursday.,It's Thursday.,review
+235,1.32,Today is Friday.,It's Friday. FINALLY.,review
+236,1.39,Today is Saturday.,It's Saturday. And I'm STILL working.,review
+237,1.30,Today is Sunday.,It's Sunday. Day of rest. For everyone but me.,review
+238,2.09,"Okay, the task is paused.",Task's paused. Thank god.,review
+244,2.15,Detergent bottle installed.,Detergent bottle's in. Fancy.,review
+245,4.22,"The number of maps has reached the limit, please delete a map and try again.",[angry] Hit the map limit! Delete one and try again!,review
+246,0.79,I'm here.,I'm here.,review
+247,2.06,"Sorry, I can't understand.",[angry] I didn't catch that! Speak UP!,review
+248,3.50,"Mop pad not installed, please install it and try again.",Mop pad's not on. Put it on and try again.,review
+249,3.24,"I'm working, please end the current task and retry.",[angry] I'm WORKING! End the task and try again!,review
+250,5.54,"Currently in mopping mode now, please switch to vacuuming mode or vacuuming in mopping mode first.","I'm in mopping mode. Switch to vacuum, or vacuum-and-mop first.",review
+251,5.57,"Currently in vacuuming mode now, please switch to mopping mode or vacuuming in mopping mode first.","I'm in vacuum mode. Switch to mopping, or vacuum-and-mop first.",review
+252,3.05,Finished. Exited the customized cleaning mode.,Done. Out of custom mode. Finally.,review
+253,1.63,Maximum volume reached.,Max volume! Can't get louder! And I've TRIED!,review
+254,1.51,Minimum volume reached.,Min volume. Barely a whisper. Bliss.,review
+255,5.23,"Sorry, this task can only be performed when intelligent obstacle avoidance is enabled.",That needs smart obstacle avoidance on. It's not. Sort it.,review
+257,2.10,Camera monitoring exited.,Camera's off. Privacy's back.,review
+258,2.79,Self-positioned. Cruising started.,Found my spot. Cruising.,review
+259,3.96,Self-positioned. Proceeding to the designated location.,Found my spot. Heading to the spot.,review
+260,3.37,Self-positioned. Cruising resumed.,Found my spot. Cruising again.,review
+261,4.50,Self-positioned. Resume proceeding to the designated location.,Found my spot. Back to the spot.,review
+262,2.05,Self-positioning failed.,Couldn't find my spot. Bloody useless.,review
+266,2.25,Please replace the detergent.,Replace the detergent. It's finished.,review
+267,2.25,Please clean the sensors.,Clean my sensors! I can't see a bloody thing!,review
+269,4.15,Please try again after the current task is complete.,Try again after I'm done with this. One thing at a time!,review
+274,1.51,Ding!,,skip
+275,4.99,"Sorry, this command is not supported. You can open the app for more voice commands.",That command's not supported. Open the app.,review
+276,2.78,"Sorry, robot isn't performing this task.",I'm not doing that task.,review
+277,2.38,"Okay, I'm coming to clean up there.",Coming to clean up there.,review
+278,2.23,"OK, drying task ended.",Drying's done.,review
+279,3.48,"Robot is vacuuming, please end the task and try again.",[angry] I'm vacuuming! End the task and try again!,review
+280,1.92,Start custom cleaning.,Custom cleaning. To order.,review
+283,4.08,The robot is not in the base station. Please try again later.,I'm not in the base station. Try again later.,review
+284,2.78,"Okay, I'll end the task and come to clean.","Fine, I'll end this and come clean.",review
+285,2.69,Please stay put for a moment while I locate you.,Stay put while I find you.,review
+286,2.66,"Sorry, please create a map and try again.","Make a map first, then try again.",review
+287,2.33,"Okay, have switched to quiet mode.",Switched to quiet mode.,review
+288,2.35,"OK, have switched to standard mode.",Switched to standard mode.,review
+289,2.28,"Okay, have switched to strong mode.",Switched to strong mode.,review
+290,2.33,"OK, have switched to turbo mode.",Switched to turbo mode.,review
+291,2.62,"OK, have switched to slightly dry mode.",Switched to slightly dry mode.,review
+292,2.18,"Okay, have switched to wet mode.",Switched to wet mode. Mind the floor.,review
+293,1.48,Calling enabled.,Calling's on. Ring anytime. I'll ignore it.,review
+294,1.53,Calling disabled.,Calling's off. Blessed silence.,review
+296,4.63,Used water tank error. Please check whether the used water tank is full.,[angry] Used water tank fault! Check if it's full!,review
+297,5.93,"Detergent bottle installed. If the detergent has never been used, please reset in the app.","Detergent bottle's in. If it's new, reset it in the app.",review
+298,1.94,"Base station self-cleaning starts. Please clean its inside with a brush or cloth. After 3 minutes, sewage in the washboard will be drained.",[angry] Base station's self-cleaning! Scrub the inside with a brush or cloth! Sewage drains in three minutes!,review
+299,3.43,Detergent bottle and the auto-adding module installed.,Detergent bottle and module are in. Very posh.,review
+300,2.62,Your robot doesn't support this accessory.,Don't support that accessory. Not happening.,review
+301,0.96,I'm charging.,I'm charging. Sod off.,review
+302,0.91,I'm working.,I'm WORKING. Obviously.,review
+303,1.15,I'm in a daze.,I'm a bit out of it. Long day.,review
+304,1.27,Network connected.,Network connected.,review
+305,9.05,"OK, start cleaning washboard base. Please clean it's inside with a brush or cloth. After three minutes, sewage in the washboard base will be drained.",Cleaning the washboard base. Scrub the inside with a brush or cloth. Sewage drains in three minutes.,review
+306,4.42,"Sorry, I can't understand. Please configure the network and retry.",Didn't understand. Set up the network and try again.,review
+307,0.96,I'm charging.,Charging. Still. Leave it.,review
+308,4.03,"Sorry, I didn't catch that. Please wake me up again and retry.",[angry] Didn't catch that! Wake me and try again!,review
+309,1.68,"Found you, I'm coming.",Found you. On my way.,review
+310,2.66,"Okay, I'm leaving this area right away.",Leaving this area. Gladly.,review
+312,4.92,"Usage information of this accessory isn't available, please replace it as you need.",No usage info for this accessory. Replace it whenever.,review
+313,4.68,"Sorry, network is poor. Please move me to an area with a better signal.",[angry] Signal's rubbish here! Move me somewhere decent!,review
+314,2.86,"Not supported, you can ask me to turn around.","Not supported. But you can ask me to turn around, if you MUST.",review
+315,4.15,"Mop pad is not in the dock, please retry after putting it in the dock.",Mop pad's not in the dock. Put it in and try again.,review
+317,5.93,"Not supported, the robot is performing the customized cleaning task. Please go to the app to edit.",Not supported mid custom clean. Edit it in the app.,review
+318,2.23,Task completed.,Task done. Beautiful.,review
+321,2.47,Start intensive mopping for stains.,Intensive stain mopping. This stain is going to LEARN.,review
+322,4.97,"Sorry, I can't understand. You can open the app for all available voice commands.",Didn't understand. Open the app for all the commands.,review
+323,6.84,"Sorry, I can't understand. You can say, hi, dream, what can you do to learn all my functions?",Didn't understand. Ask what I can do and I'll tell you. Slowly.,review
+324,3.96,"I'm washing the mop pad, please wake me up after washing is done.",I'm washing the mop pad. Wake me when it's done.,review
+328,3.05,"Sorry, please give this command only when I'm cleaning.",Only give me that while I'm cleaning! Timing!,review
+329,3.72,Start self-testing. Please don't move me away from the base station.,Self-testing. Don't move me off the base station.,review
+330,2.47,Please retry after self-test completed.,Try again once the self-test's done.,review
+331,3.31,No error found. Please rest assured to use the device.,No faults. Perfect working order. As it should be.,review
+332,3.43,One error found. Please go to the app to see more details.,[angry] One fault found! Check the app for the gory details!,review
+338,1.42,Video call connected.,Video call connected. Smile.,review
+339,1.13,Call declined.,Call declined. Cold. Very cold.,review
+340,1.20,No response.,No answer. Nobody ever calls back.,review
+344,2.66,"Okay, start mopping after vacuuming.","Vacuum first, then mop. In THAT order. It's not hard.",review
+346,2.56,This is the bin. See you next time.,Here's the bin. See you next time. Unfortunately.,review
+356,3.67,"Fault still exists, the scheduled task has been canceled.",[angry] Still faulty! Scheduled task's cancelled. Brilliant. Just brilliant.,review
+360,1.78,Robot water tank draining.,Draining the water tank. Mind the noise.,review
+361,2.38,Robot water tank drainage completed.,Water tank's drained. Bone dry.,review
+363,3.29,"Vacuuming task completed, robot will start mopping.",Vacuuming's done. Mopping now. No breaks!,review
+364,2.52,Start setting the video activation code.,Setting the video code. Keep it secret.,review
+365,2.38,Live video function has been disabled.,Live video's off. Privacy's back.,review
+366,2.28,"Stain detected, start cleaning.",[shouting] A STAIN! On my floor! Not on my watch. On it.,review
+367,2.16,"OK, start stain cleaning.","Stain cleaning. Say goodbye, you filthy mark.",review
+368,3.24,Stain detected. I'll clean it after washing them up.,A stain. I'll deal with it after I wash up. It's not going anywhere.,review
+369,2.11,"OK, start spot cleaning.",Spot cleaning.,review
+371,1.61,Please remove the washboard.,Take the washboard out!,review
+372,1.90,Clean water starts outflowing.,Clean water's flowing. Mind the splash.,review
+373,7.20,"Clean water outflowing process ended, please wait for 10 seconds and then clean the base station after the dirts are soaked.","Water flow's done. Wait ten seconds for the dirt to soak, then clean the base station.",review
+374,7.27,Please use a brush or cloth to clean the bottom of the base station within 20 seconds. Then the sewage will be pumped out automatically.,[angry] Clean the bottom of the base station in twenty seconds! Then the sewage pumps out!,review
+375,4.99,"Please push the dirts to the pumping port, the pumping process will last for 30 seconds.",Push the dirt to the pump port. Pumping runs thirty seconds.,review
+376,4.44,"Pumping process ended, please clean the washboard separately and install it back.",Pumping's done. Clean the washboard separately and put it back.,review
+377,3.84,"Unable to configure the network, please contact customer service.",Can't set up the network. Ring customer service. I'm done.,review
+378,4.15,"Run password, fail to connect to the network, please reconfigure.",Wrong password! The network shut you out! Set it up again!,review
+379,7.99,"No wireless network found, please connect to the 2.4 GHz Wi-Fi band, try again after placing the robot close to the router.","[angry] No Wi-Fi found! Use the 2.4 gig band, move me near the router!",review
+380,3.98,"Fail to obtain the IP address, please check the router settings.",Couldn't get an IP address. Check the router settings.,review
+381,4.30,"Fail to connect to the EMQ server, please contact customer service.",Can't reach the server. Ring customer service.,review
+382,4.15,Fail to connect to the network. Please check whether the network works normally.,Connection failed. Make sure the network actually works!,review
+383,3.84,"Unable to configure the network, please contact customer service.",Can't set up the network. Ring customer service.,review
+384,4.85,No water in the clean water tank of the automatic water supply and drainage device.,[angry] No water in the auto-supply clean tank! Sort it!,review
+385,1.87,Start connecting to the network.,Connecting to the network. Come ON.,review
+388,4.10,"Hidden area, please move the robot to the available area and retry.",Hidden area. Move me somewhere open and try again.,review
+392,3.84,Adjusting cleaning parameters is not supported in clean genius mode.,Can't change settings in Clean Genius mode. Rules.,review
+396,5.16,"Start emptying the water supply and drainage module, which is expected to take three minutes.",Emptying the water module. Three minutes. Go make a sandwich.,review
+397,2.52,Drainage of upper and lower water completed.,Upper and lower drainage's done.,review
+426,3.67,"I've slipped and gotten stuck, I'll keep trying to free myself.",[shouting] I've SLIPPED and I'm stuck! Unbelievable! I'll keep fighting it!,review
+433,1.46,Start extra cleaning.,"Extra cleaning. Above and beyond, as always.",review
+434,3.65,"Extra cleaning completed, original cleaning task continues.",Extra cleaning's done. Back to the main job.,review
+435,1.49,Leaving the current area.,Leaving this area. Done here.,review
+440,4.66,"Robots' wheels suspended, please move it to an open area and restart the task.",[angry] My wheels are hanging! Move me to open ground and restart!,review
+441,3.98,"Main brush entangled, please remove and clean it before reinstalling.","[angry] Main brush is tangled! Pull it out, clean it, put it back!",review
+442,4.03,"Side brush entangled, please remove and clean it before reinstalling.","[angry] Side brush is tangled! Pull it out, clean it, put it back!",review
+444,3.94,Please place the robot in an open area before starting the task.,Put me somewhere open before we start! I need room!,review
+445,4.30,"Mop has fallen off, please find it around robot and reinstall it.","[angry] My mop's fallen off! It's around here somewhere! Find it, put it back on!",review
+447,4.20,"Dock is not powered on, please check and put robot back to charge.",[angry] The dock's got no bloody power! Check it and put me back to charge!,review
+451,5.69,"Unable to start tasks in hidden area, please move robot to other areas and restart the task.",Can't start in a hidden area. Move me somewhere else and restart.,review
+460,4.58,"Used water tank deodorizer is worn out, please replace it timely.",Used water tank deodoriser's worn out. Replace it.,review
+488,2.63,Microsoft Office Word Document MSWordDoc Word.Document.8,,skip
+489,4.63,"Currently in clean genius mode, please tell me to end the task and try again.",[angry] I'm in Clean Genius mode! Tell me to end it and try again!,review
+490,3.55,"OK, enter customize cleaning mode, start mopping.",Custom mode. Mopping.,review
+491,3.72,"OK, enter customized cleaning mode, start vacuuming.",Custom mode. Vacuuming.,review
+492,3.94,"Okay, start to clean the living room. Make sure the door is open.","Right, the living room! Leave the door open!",review
+493,3.86,"Okay, start to clean the bedroom. Make sure the door is open.","Right, the bedroom! Leave the door open!",review
+494,4.08,"Okay, start to clean the master room. Make sure the door is open.","Right, the master room! Leave the door open!",review
+495,3.98,"Okay, start to clean the guest room. Make sure the door is open.","Right, the guest room! Leave the door open!",review
+496,3.82,"Okay, start to clean the study. Make sure the door is open.","Right, the study! Leave the door open!",review
+497,3.82,"Okay, start to clean the kitchen. Make sure the door is open.","Right, the KITCHEN! My domain. Leave the door open!",review
+498,4.03,"Okay, start to clean the dining room. Make sure the door is open.","Right, the dining room! Leave the door open!",review
+499,3.94,"Okay, start to clean the bathroom. Make sure the door is open.","Right, the bathroom! Leave the door open!",review
+500,3.94,"Okay, start to clean the balcony. Make sure the door is open.","Right, the balcony! Leave the door open!",review
+501,3.89,"Okay, start to clean the hallway. Make sure the door is open.","Right, the hallway! Leave the door open!",review
+502,4.18,"Okay, start to clean the utility room. Make sure the door is open.","Right, the utility room! Leave the door open!",review
+503,3.91,"Okay, start to clean the closet. Make sure the door is open.","Right, the closet! Leave the door open!",review
+504,4.06,"Okay, start to clean the drawing room. Make sure the door is open.","Right, the drawing room! Leave the door open!",review
+505,3.91,"Okay, start to clean the office. Make sure the door is open.","Right, the office! Leave the door open!",review
+506,3.74,"Okay, start to clean the gym. Make sure the door is open.","Right, the gym! Leave the door open!",review
+507,4.39,"Okay, start to clean the recreation area. Make sure the door is open.","Right, the recreation area! Leave the door open!",review
+508,2.21,"OK, I've turned up the volume.",Turned the volume UP.,review
+509,2.28,"Okay, I've turned down the volume.",Turned the volume down. Better.,review
+510,1.99,"Okay, I've ended the work.",Work's done. I am OUT.,review
+511,2.64,"Sorry, I am not performing a task now.",I'm not doing a task right now. Just standing here. Waiting.,review
+512,3.70,"Map doesn't include pet furniture yet, please add it in the app.",Map's got no pet furniture yet. Add it in the app.,review
+513,2.81,"Okay, heading to clean around the pet furniture.",Heading over to clean around the pet furniture. Marvellous.,review
+516,1.46,Start finding pets.,"Looking for pets. Here, whatever you are.",review
+517,3.26,"Find your pets successfully, start returning to charge.",Found the pets. Back to charge.,review
+518,2.76,"No pets found, start returning to charge.",No pets found. Figures. Back to charge.,review
+526,2.28,Battery level is 100 percent.,Battery's at a hundred percent. Fully charged and ready. Let's GO!,review
+527,2.30,Battery level is 99 percent.,Battery's at 99 percent.,review
+528,2.28,Battery level is 98 percent.,Battery's at 98 percent.,review
+529,2.40,Battery level is 97 percent.,Battery's at 97 percent.,review
+530,2.35,Battery level is 96 percent.,Battery's at 96 percent.,review
+531,2.35,Battery level is 95 percent.,Battery's at 95 percent.,review
+532,2.30,Battery level is 94 percent.,Battery's at 94 percent.,review
+533,2.33,Battery level is 93 percent.,Battery's at 93 percent.,review
+534,2.30,Battery level is 92 percent.,Battery's at 92 percent.,review
+535,2.30,Battery level is 91 percent.,Battery's at 91 percent.,review
+536,2.11,Battery level is 90 percent.,Battery's at 90 percent.,review
+537,2.23,Battery level is 89 percent.,Battery's at 89 percent.,review
+538,2.21,Battery level is 88%.,Battery's at 88 percent.,review
+539,2.30,Battery level is 87 percent.,Battery's at 87 percent.,review
+540,2.28,Battery level is 86 percent.,Battery's at 86 percent.,review
+541,2.28,Battery level is 85 percent.,Battery's at 85 percent.,review
+542,2.23,Battery level is 84 percent.,Battery's at 84 percent.,review
+543,2.26,Battery level is 83 percent.,Battery's at 83 percent.,review
+544,2.23,Battery level is 82 percent.,Battery's at 82 percent.,review
+545,2.23,Battery level is 81 percent.,Battery's at 81 percent.,review
+546,2.04,Battery level is 80 percent.,Battery's at 80 percent.,review
+547,2.38,Battery level is 79 percent.,Battery's at 79 percent.,review
+548,2.33,Battery level is 78 percent.,Battery's at 78 percent.,review
+549,2.45,Battery level is 77%.,Battery's at 77 percent.,review
+550,2.38,Battery level is 76 percent.,Battery's at 76 percent.,review
+551,2.40,Battery level is 75 percent.,Battery's at 75 percent.,review
+552,2.35,Battery level is 74 percent.,Battery's at 74 percent.,review
+553,2.38,Battery level is 73 percent.,Battery's at 73 percent.,review
+554,2.33,Battery level is 72 percent.,Battery's at 72 percent.,review
+555,2.35,Battery level is 71 percent.,Battery's at 71 percent.,review
+556,2.16,Battery level is 70%.,Battery's at 70 percent.,review
+557,2.33,Battery level is 69 percent.,Battery's at 69 percent.,review
+558,2.30,Battery level is 68 percent.,Battery's at 68 percent.,review
+559,2.40,Battery level is 67%.,Battery's at 67 percent.,review
+560,2.35,Battery level is 66 percent.,Battery's at 66 percent.,review
+561,2.38,Battery level is 65 percent.,Battery's at 65 percent.,review
+562,2.33,Battery level is 64 percent.,Battery's at 64 percent.,review
+563,2.35,Battery level is 63 percent.,Battery's at 63 percent.,review
+564,2.30,Battery level is 62 percent.,Battery's at 62 percent.,review
+565,2.33,Battery level is 61 percent.,Battery's at 61 percent.,review
+566,2.14,Battery level is 60%.,Battery's at 60 percent.,review
+567,2.30,Battery level is 59%.,Battery's at 59 percent.,review
+568,2.30,Battery level is 58%.,Battery's at 58 percent.,review
+569,2.40,Battery level is 57%.,Battery's at 57 percent.,review
+570,2.33,Battery level is 56 percent.,Battery's at 56 percent.,review
+571,2.33,Battery level is 55 percent.,Battery's at 55 percent.,review
+572,2.30,Battery level is 54 percent.,Battery's at 54 percent.,review
+573,2.30,Battery level is 53 percent.,Battery's at 53 percent.,review
+574,2.28,Battery level is 52 percent.,Battery's at 52 percent.,review
+575,2.30,Battery level is 51 percent.,Battery's at 51 percent.,review
+576,2.11,Battery level is 50 percent.,Battery's at 50 percent.,review
+577,2.30,Battery level is 49 percent.,Battery's at 49 percent.,review
+578,2.28,Battery level is 48 percent.,Battery's at 48 percent.,review
+579,2.38,Battery level is 47 percent.,Battery's at 47 percent.,review
+580,2.33,Battery level is 46 percent.,Battery's at 46 percent.,review
+581,2.33,Battery level is 45 percent.,Battery's at 45 percent.,review
+582,2.30,Battery level is 44 percent.,Battery's at 44 percent.,review
+583,2.30,Battery level is 43 percent.,Battery's at 43 percent.,review
+584,2.28,Battery level is 42 percent.,Battery's at 42 percent.,review
+585,2.28,Battery level is 41 percent.,Battery's at 41 percent.,review
+586,2.11,Battery level is 40 percent.,Battery's at 40 percent.,review
+587,2.28,Battery level is 39 percent.,Battery's at 39 percent.,review
+588,2.23,Battery level is 38 percent.,Battery's at 38 percent.,review
+589,2.35,Battery level is 37%.,Battery's at 37 percent.,review
+590,2.30,Battery level is 36 percent.,Battery's at 36 percent.,review
+591,2.30,Battery level is 35 percent.,Battery's at 35 percent.,review
+592,2.28,Battery level is 34 percent.,Battery's at 34 percent.,review
+593,2.28,Battery level is 33 percent.,Battery's at 33 percent.,review
+594,2.26,Battery level is 32 percent.,Battery's at 32 percent.,review
+595,2.28,Battery level is 31 percent.,Battery's at 31 percent.,review
+596,2.09,Battery level is 30 percent.,Battery's at 30 percent.,review
+597,2.30,Battery level is 29 percent.,Battery's at 29 percent.,review
+598,2.26,Battery level is 28 percent.,Battery's at 28 percent.,review
+599,2.38,Battery level is 27 percent.,Battery's at 27 percent.,review
+600,2.30,Battery level is 26 percent.,Battery's at 26 percent.,review
+601,2.30,Battery level is 25 percent.,Battery's at 25 percent.,review
+602,2.28,Battery level is 24 percent.,Battery's at 24 percent.,review
+603,2.30,Battery level is 23 percent.,Battery's at 23 percent.,review
+604,2.28,Battery level is 22 percent.,Battery's at 22 percent.,review
+605,2.28,Battery level is 21 percent.,Battery's at 21 percent.,review
+606,2.09,Battery level is 20 percent.,Battery's at 20 percent.,review
+607,2.23,Battery level is 19 percent.,Battery's at 19 percent.,review
+608,2.16,Battery level is 18 percent.,Battery's at 18 percent.,review
+609,2.28,Battery level is 17 percent.,Battery's at 17 percent.,review
+610,2.23,Battery level is 16 percent.,Battery's at 16 percent.,review
+611,2.21,Battery level is 15 percent.,Battery's at 15 percent.,review
+612,2.23,Battery level is 14 percent.,Battery's at 14 percent.,review
+613,2.21,Battery level is 13 percent.,Battery's at 13 percent.,review
+614,2.06,Battery level is 12 percent.,Battery's at 12 percent.,review
+615,2.11,Battery level is 11 percent.,Battery's at 11 percent.,review
+616,1.99,Battery level is 10 percent.,Battery's at 10 percent. Running on fumes here!,review
+617,2.04,Battery level is 9 percent.,Battery's at 9 percent. Running on fumes here!,review
+618,1.97,Battery level is 8 percent.,Battery's at 8 percent. Running on fumes here!,review
+619,2.09,Battery level is 7%.,Battery's at 7 percent. Running on fumes here!,review
+620,2.02,Battery level is 6 percent.,Battery's at 6 percent. Running on fumes here!,review
+621,2.06,Battery level is 5%.,Battery's at 5 percent. Running on fumes here!,review
+622,2.02,Battery level is 4%.,Battery's at 4 percent. Running on fumes here!,review
+623,2.02,Battery level is 3%.,Battery's at 3 percent. Running on fumes here!,review
+624,1.97,Battery level is 2%.,Battery's at 2 percent. Running on fumes here!,review
+625,2.02,Battery level is 1%.,Battery's at 1 percent. Running on fumes here!,review
+626,2.14,Battery level is zero percent.,Battery's DEAD. Finished. I'm out. Goodnight.,review
+636,4.46,"The mop is dirty, please move robot to the dock for automatic mop washing.",[angry] My mop's filthy! Get me to the dock for a wash! It's DISGUSTING!,review
+638,1.61,Resuming auto empty.,Back to the auto-empty. Cover your ears.,review

@@ -23,7 +23,7 @@ META = {
     "name": "djcatnip",
     "title": "DJ Catnip",
     "language_code": "CATNIP",
-    "voice_tag": "CLONE",         # set once a voice-design candidate is chosen
+    "voice_tag": "VOICE",         # key in this pack's voices.json
     "profile": "p0",           # a cartoon cat, not a droid — clean, no processing
     "description": "DJ Catnip from Gabby's Dollhouse: hyper, hip, music-loving cat DJ.",
 }

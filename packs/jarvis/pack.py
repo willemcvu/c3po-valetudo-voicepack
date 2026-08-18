@@ -23,7 +23,7 @@ META = {
     "name": "jarvis",
     "title": "JARVIS",
     "language_code": "JARVIS",
-    "voice_tag": "CLONE",
+    "voice_tag": "VOICE",
     "profile": "p0",           # refined natural voice; a light AI sheen (p1) is optional
     "description": "JARVIS from Iron Man: calm, refined, unflappable AI butler with dry wit.",
 }
