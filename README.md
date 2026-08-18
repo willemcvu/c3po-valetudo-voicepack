@@ -10,6 +10,7 @@ Packs:
 
 - **C-3PO** (`packs/c3po/`) — fussy, anxious protocol droid. Language code `C3PO`.
 - **DJ Catnip** (`packs/djcatnip/`) — hip music-loving cat DJ, cloned voice. Language code `CATNIP`.
+- **JARVIS** (`packs/jarvis/`) — calm, refined AI butler, cloned voice. Language code `JARVIS`.
 
 ## Browse and install
 

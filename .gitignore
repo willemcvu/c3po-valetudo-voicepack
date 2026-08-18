@@ -24,5 +24,10 @@ build/
 __pycache__/
 *.pyc
 
+# The Pages catalog is regenerated from packs/ by CI (.github/workflows/pages.yml),
+# so it doesn't need committing. Remove this line if you'd rather commit docs/
+# and use Pages' "Deploy from a branch" source instead.
+docs/
+
 # Intermediate copy of the robot's audio; reference/robot/EN/ holds the files.
 reference/robot/audio-en.tar.gz
