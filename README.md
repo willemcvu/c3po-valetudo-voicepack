@@ -1,5 +1,11 @@
 # Valetudo voice packs for Dreame
 
+### ▶ [**Browse & sample the packs → willemcvu.github.io/valetudo-dreame-voicepacks**](https://willemcvu.github.io/valetudo-dreame-voicepacks/)
+
+Play every pack in the browser and copy the URL, Language Code and Hash to paste into Valetudo.
+
+---
+
 Custom voice packs for Dreame robot vacuums running [Valetudo](https://valetudo.cloud/). Each
 pack rewrites and re-voices all 421 stock prompts in character.
 
@@ -15,9 +21,10 @@ Packs:
 
 ## Browse and install
 
-A catalog site (GitHub Pages, generated into `docs/`) lets you sample each pack and copy its
-install fields: browse, play, then paste the URL / Language Code / Hash into Valetudo.
-Regenerate it with `scripts/build_site.py` after adding or rebuilding a pack.
+The [catalog site](https://willemcvu.github.io/valetudo-dreame-voicepacks/) lets you sample
+each pack and copy its install fields: browse, play, then paste the URL / Language Code / Hash
+into Valetudo. It's a static site generated into `docs/` by `scripts/build_site.py` and
+published by CI (`.github/workflows/pages.yml`) on every push.
 
 ## Install
 
