@@ -27,13 +27,13 @@ lock = Lock()
 done = failed = skipped = 0
 
 
-def synth(job, voice_id, out_dir, key):
+def synth(job, voice_id, out_dir, key, settings=None):
     global done, failed
     sound_id, text = job
     dest = out_dir / f"{sound_id}.mp3"
     for attempt in range(MAX_RETRIES):
         try:
-            dest.write_bytes(tts.speak(text, voice_id, model=MODEL, key=key))
+            dest.write_bytes(tts.speak(text, voice_id, model=MODEL, settings=settings, key=key))
             with lock:
                 done += 1
                 print(f"  [{done + failed + skipped}] {sound_id}", flush=True)
@@ -64,6 +64,7 @@ def main():
 
     voice_tag = pack.META["voice_tag"]
     voice_id = tts.voices(pdir)[voice_tag]
+    settings = pack.META.get("voice_settings")
     key = tts.api_key()
 
     lines_csv = pdir / "lines.csv"
@@ -85,7 +86,7 @@ def main():
 
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         for job in jobs:
-            pool.submit(synth, job, voice_id, out_dir, key)
+            pool.submit(synth, job, voice_id, out_dir, key, settings)
 
     print(f"\n[{name}] done {done}  failed {failed}  skipped {skipped}  ->  {out_dir}")
     return 1 if failed else 0

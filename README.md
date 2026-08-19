@@ -15,9 +15,12 @@ same sound IDs are likely compatible but untested.
 Packs:
 
 - **C-3PO** (`packs/c3po/`) — fussy, anxious protocol droid. Language code `C3PO`.
-- **DJ Catnip** (`packs/djcatnip/`) — hip music-loving cat DJ, cloned voice. Language code `CATNIP`.
-- **JARVIS** (`packs/jarvis/`) — calm, refined AI butler, cloned voice. Language code `JARVIS`.
-- **Bertram** (`packs/bertram/`) — lazy, deadpan, sardonic butler, cloned voice. Language code `BERTRAM`.
+- **DJ Catnip** (`packs/djcatnip/`) — hip music-loving cat DJ. Language code `CATNIP`.
+- **JARVIS** (`packs/jarvis/`) — calm, refined AI butler. Language code `JARVIS`.
+- **Bertram** (`packs/bertram/`) — lazy, deadpan, sardonic butler. Language code `BERTRAM`.
+- **Bob Ross** (`packs/bobross/`) — soft-spoken, gentle, encouraging. Language code `BOBROSS`.
+- **Gordon Ramsay** (`packs/gordon/`) — furious chef, appalled by your filthy floor. Language code `GORDON`.
+- **Dalek** (`packs/dalek/`) — monotone, ring-modulated, exterminating your dust. Language code `DALEK`.
 
 ## Browse and install
 
